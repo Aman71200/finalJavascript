@@ -228,3 +228,43 @@ console.log(conLower.toLowerCase());
 
 let uniCode = "Mastering JS";
 console.log(uniCode.charCodeAt(10));
+
+// ✅ Q1. Capitalize first letter of each word
+// Methods: split(), map(), charAt(), toUpperCase(), slice(), join()
+// Hint: Har word ko split karke, first letter uppercase karo, baaki slice lagao.
+
+// ✅ Q2. Anagram checker
+// Methods: split(), sort(), join()
+// Hint: Dono strings ko sort karke compare kar de.
+
+// ✅ Q3. Truncate sentence after 20 chars
+// Methods: slice(), length, if condition
+// Hint: Agar sentence ki length > 20, to slice(0, 20) + "..."
+
+// ✅ Q4. Count vowels
+// Methods: split(), filter(), includes()
+// Hint: Har letter check karo kya "aeiouAEIOU" me hai.
+
+// ✅ Q5. Generate username
+// Methods: toLowerCase(), split(), join()
+// Hint: Full name ko lowercase mein convert karo aur space ko . se replace karo.
+
+// ✅ Q6. Remove extra spaces
+// Methods: trim(), split(" "), filter(), join(" ")
+// Hint: Extra space hatane ke liye filter(word => word !== "") use kar.
+
+// ✅ Q7. Find longest word
+// Methods: split(" "), reduce() or forEach()
+// Hint: Har word ka length check karke sabse bada store karo.
+
+// ✅ Q8. Only alphabets?
+// Methods: test() with RegExp: /^[A-Za-z]+$/
+// Hint: Agar regex pass karta hai to true return karo.
+
+// ✅ Q9. Convert to camelCase
+// Methods: split(), map(), toUpperCase(), slice(), join("")
+// Hint: Pehla word chhodo, baaki ka pehla letter capitalize karke join karo.
+
+// ✅ Q10. Replace all digits with *
+// Methods: replace() with RegExp: /\d/g
+// Hint: Use .replace(/\d/g, "*")

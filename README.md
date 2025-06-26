@@ -32,6 +32,16 @@
 
 ---
 
+### 🚀 Summary:
+- All 10 questions solved successfully
+- Used both **loops** and **JS built-in methods**
+- Snapshot + commit done
+- GitHub updated ✅
+
+---
+
+### 📁 Commit Message Used:
+
 ## ✅ Day 5 – String Methods Part 1
 - length, slice, substring, includes, trim
 - Practice: Q1–Q6
@@ -67,13 +77,30 @@
 | Q21 | Convert `"Coding IS Fun"` to lowercase                    | `.toLowerCase()`                       |
 | Q22 | Unicode of character `"J"` from `"Mastering JS"`          | `.charCodeAt()`                        |
 
+## 🚫 Day 6 – Practice Skipped (Rest Day)
 
-### 🚀 Summary:
-- All 10 questions solved successfully
-- Used both **loops** and **JS built-in methods**
-- Snapshot + commit done
-- GitHub updated ✅
+Today I decided to pause my JavaScript practice due to a rising headache and mental fatigue.  
+Rather than forcing poor-quality work, I’m taking a short rest and will continue tomorrow with full energy.
+
+✅ GitHub contribution streak is maintained by pushing placeholders.  
+⏭️ All Day 6 questions will be solved before starting Day 7.
 
 ---
 
-### 📁 Commit Message Used:
+### 📚 Questions Planned for Day 6:
+
+| No.  | Question                                                       | Method(s) to Use                              | Status         |
+|------|----------------------------------------------------------------|-----------------------------------------------|----------------|
+| Q1   | Capitalize first letter of each word in a sentence            | .split(), .map(), .join(), .charAt(), .slice()| Not Completed  |
+| Q2   | Check if two strings are anagrams                              | .toLowerCase(), .split(), .sort(), .join()    | Not Completed  |
+| Q3   | Truncate a string and add "..." at the end                    | .slice(), condition, + operator               | Not Completed  |
+| Q4   | Count the number of vowels in a sentence                      | Loop, .includes() or regex                    | Not Completed  |
+| Q5   | Generate a username from first & last name (e.g., "john_doe") | .toLowerCase(), template literals             | Not Completed  |
+
+---
+
+🧠 **Tomorrow's Plan:**
+- Complete all 5 questions before moving to Day 7
+- Stay consistent without pressure
+
+📅 Resting Today. Coding Tomorrow. Consistency Always 💚
