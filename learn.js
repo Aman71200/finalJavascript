@@ -107,34 +107,34 @@
 
 // Q1. Write a function that returns the length of any string.
 
-function findLength (name) {
-    return name.length
-}
-console.log(findLength("Aman"));
+// function findLength (name) {
+//     return name.length
+// }
+// console.log(findLength("Aman"));
 
 // Q2. Slice out the word "world" from "Hello world, buddy!"
 
-let extArr = "Hello World, Buddy!";
-console.log(extArr.slice(6, 11));
+// let extArr = "Hello World, Buddy!";
+// console.log(extArr.slice(6, 11));
 
 // Q3. Use .substring() to extract "buddy" from "Hello world, buddy!"
 
-console.log(extArr.substring(13, 19));
+// console.log(extArr.substring(13, 19));
 
 // Q4. Check if the sentence "I love JavaScript" includes "love"
 
-let checkTence = "I Love javaScript";
-console.log(checkTence.includes("Love"));
+// let checkTence = "I Love javaScript";
+// console.log(checkTence.includes("Love"));
 
 // Q5. Remove all extra spaces from " I am learning JS " using .trim()
 
-let space = "  I am learning JS   ";
-console.log(space.trim());
+// let space = "  I am learning JS   ";
+// console.log(space.trim());
 
 // Q6. Get the last 4 characters of the string "JavaScript" using .slice()
 
-let js = "JavaScript";
-console.log(js.slice(6, 10));
+// let js = "JavaScript";
+// console.log(js.slice(6, 10));
 
 // JavaScript Day 6
 
@@ -142,32 +142,32 @@ console.log(js.slice(6, 10));
 
 // Q1. Replace the word "sad" with "happy" in the sentence "I am very sad today"
 
-let replaceText = "I am very sad";
-console.log(replaceText.replace("sad", "happy"));
+// let replaceText = "I am very sad";
+// console.log(replaceText.replace("sad", "happy"));
 
 // Q2. Split the string "Learn-Code-Build-Repeat" by - and print the array
 
-let sptStr = "Learn-Code-Build-Repeat";
-console.log(sptStr.split("-"));
+// let sptStr = "Learn-Code-Build-Repeat";
+// console.log(sptStr.split("-"));
 
 // Q3. Convert "myNameIsBuddy" to uppercase
 
-let convertupper = "myNameIsbuddy";
-console.log(convertupper.toUpperCase());
+// let convertupper = "myNameIsbuddy";
+// console.log(convertupper.toUpperCase());
 
 // Q4. Get the character at index 2 from "JavaScript"
 
-let nameJs = "JavaScript";
-console.log(nameJs.charAt(1));
+// let nameJs = "JavaScript";
+// console.log(nameJs.charAt(1));
 
 // Q5. What is the Unicode of the character at index 1 of "Buddy"?
 
-console.log(nameJs.charCodeAt(0));
+// console.log(nameJs.charCodeAt(0));
 
 // Q6. Repeat the word "Fun " 4 times using .repeat()
 
-let text = "Fun";
-console.log(text.repeat(4));
+// let text = "Fun";
+// console.log(text.repeat(4));
 
 // Day 5 & Day 6 – Practice Mode
 
@@ -175,59 +175,59 @@ console.log(text.repeat(4));
 
 // Q1. Create a function that returns the last character of any string.
 
-function lastcahracter (name) {
-    return name[name.length - 1];
-}
-console.log(lastcahracter("Aman"));
+// function lastcahracter (name) {
+//     return name[name.length - 1];
+// }
+// console.log(lastcahracter("Aman"));
 
 // Q2. Given a string " Hello Buddy ", remove leading and trailing spaces and convert to uppercase.
 
-let textString = "   hello dude!   "
-console.log(textString.trim().toUpperCase());
+// let textString = "   hello dude!   "
+// console.log(textString.trim().toUpperCase());
 
 // Q3. Write a function that checks whether the word "learn" is present in any sentence or not.
 
-function checkSentence (sentence) {
-    return sentence.includes("learn");
-}
-console.log(checkSentence("I learn JavaScript")); 
+// function checkSentence (sentence) {
+//     return sentence.includes("learn");
+// }
+// console.log(checkSentence("I learn JavaScript")); 
 
 // Q4. Replace all dashes - with spaces in "Learn-Code-Build-Repeat"
 
-let repSpace = "Learn-Code-Build-Repeat";
-console.log(repSpace.replace("Learn-Code-Build-Repeat", "Learn Code Build Repeat"));
+// let repSpace = "Learn-Code-Build-Repeat";
+// console.log(repSpace.replace("Learn-Code-Build-Repeat", "Learn Code Build Repeat"));
 
 // Q5. From "JavaScript", extract "Script" using .slice()
 
-let splJs = "JavaScript";
-console.log(splJs.slice(4, 14));
+// let splJs = "JavaScript";
+// console.log(splJs.slice(4, 14));
 
 // Q6. Write a function that takes a name and returns:
 
-function takesName (name) {
-    return "Welcome, " + name.toUpperCase();
-}
-console.log(takesName("Buddy"));
+// function takesName (name) {
+//     return "Welcome, " + name.toUpperCase();
+// }
+// console.log(takesName("Buddy"));
 
 // Q7. Repeat "Practice " 5 times and store it in a variable
 
-let repWord = "Practice";
-console.log(repWord.repeat(5));
+// let repWord = "Practice";
+// console.log(repWord.repeat(5));
 
 // Q8. From "Hello123", extract only the first 5 characters
 
-let abcd = "Hello123";
-console.log(abcd.substring(4,5));
+// let abcd = "Hello123";
+// console.log(abcd.substring(4,5));
 
 // Q9. Convert "Coding IS Fun" to lowercase
 
-let conLower = "Coding IS Fun";
-console.log(conLower.toLowerCase());
+// let conLower = "Coding IS Fun";
+// console.log(conLower.toLowerCase());
 
 // Q10. From "Mastering JS", print the Unicode of character "J"
 
-let uniCode = "Mastering JS";
-console.log(uniCode.charCodeAt(10));
+// let uniCode = "Mastering JS";
+// console.log(uniCode.charCodeAt(10));
 
 // ✅ Q1. Capitalize first letter of each word
 // Methods: split(), map(), charAt(), toUpperCase(), slice(), join()
@@ -268,3 +268,85 @@ console.log(uniCode.charCodeAt(10));
 // ✅ Q10. Replace all digits with *
 // Methods: replace() with RegExp: /\d/g
 // Hint: Use .replace(/\d/g, "*")
+
+// JavaScript Day 7
+
+// Examples 
+
+// Looping Object
+
+// for (let key in obj) {
+//   console.log(key, obj[key]);
+// }
+
+// Destructuring
+
+// const { name, age } = obj;
+
+// Nested Destructuring
+
+// const { address: { city } } = user;
+
+// Object.keys / values / entries
+
+// Object.keys(obj)    // returns array of keys
+// Object.values(obj)  // returns array of values
+// Object.entries(obj) // returns array of [key, value] pairs
+
+//  10 JavaScript Object Practice Questions
+
+// Q1. Print all key–value pairs from this object:
+
+const user = { name: "Aman", age: 22, city: "Delhi" };
+
+for (let key in user) {
+  console.log(user[key]);
+}
+
+// Q2. Use nested destructuring to extract city from:
+
+const person = {
+  name: "John",
+  details: {
+    location: {
+      city: "Mumbai"
+    }
+  }
+};
+
+const {details:{location: {city}}} = person;
+
+console.log("city:", city);
+
+// Q3. Calculate total of object values
+
+const expenses = { rent: 1200, food: 600, internet: 300 };
+
+// 👇 Loop + add all values using for...in
+let total = 0;
+for (let key in expenses) {
+  total += expenses[key];
+}
+
+console.log("Total Expenses:", total); // Output: 2100
+
+// Q4. Convert object to array using Object.entries()
+const products = { pen: 10, book: 50 };
+
+// 👇 Object.entries() gives array of [key, value]
+const entries = Object.entries(products);
+
+for (let [key, value] of entries) {
+  console.log(`${key} => ${value}`);
+}
+
+// Q5. Check if object is empty
+const emptyObj = {};
+
+// 👇 Object.keys() returns array of keys
+if (Object.keys(emptyObj).length === 0) {
+  console.log("Empty");
+} else {
+  console.log("Not Empty");
+}
+// Output: Empty

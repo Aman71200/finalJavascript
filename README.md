@@ -104,3 +104,49 @@ Rather than forcing poor-quality work, I’m taking a short rest and will contin
 - Stay consistent without pressure
 
 📅 Resting Today. Coding Tomorrow. Consistency Always 💚
+
+# 📅 Day 7 – JavaScript Object Practice
+
+This file contains 5 object-based JavaScript practice questions with explanations.  
+Each problem is solved using core JS concepts like:
+
+- `for...in` loop
+- Object destructuring (including nested)
+- `Object.entries()`, `Object.keys()`
+- Conditional logic to check if object is empty
+
+---
+
+## ✅ Questions Covered
+
+1. **Print key–value pairs from an object**
+2. **Extract city from nested object using destructuring**
+3. **Calculate total expenses from an object**
+4. **Convert object to array using `Object.entries()`**
+5. **Check if object is empty or not**
+
+Each solution includes comments to explain logic for later revision.
+
+---
+
+## 📁 Files
+
+- `day7_objects.js` → All code + logic
+- `README.md` → Summary of today's learning
+
+---
+
+## ⏱️ Time Taken
+~45 minutes (due to limited schedule)
+~this is not completed by me this was done by chat gpt my buddy my Ai coding teacher who guide me in my javaScript journey i am really not satisfied to do this butg actully i dont want to break my github streak but i promised in this sunday i will recover all my roadmap mistakes and fixed everything
+
+---
+
+## 🔁 What's Next?
+
+On Sunday:
+- Revise all object concepts
+- Solve skipped reduce/map/filter Qs
+- Complete full README summary with notes
+
+---
