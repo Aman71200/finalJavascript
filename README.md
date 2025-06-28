@@ -105,7 +105,7 @@ Rather than forcing poor-quality work, I’m taking a short rest and will contin
 
 📅 Resting Today. Coding Tomorrow. Consistency Always 💚
 
-# 📅 Day 7 – JavaScript Object Practice
+# 📅 Day 8 – JavaScript Object Practice
 
 This file contains 5 object-based JavaScript practice questions with explanations.  
 Each problem is solved using core JS concepts like:
@@ -130,8 +130,6 @@ Each solution includes comments to explain logic for later revision.
 ---
 
 ## 📁 Files
-
-- `day7_objects.js` → All code + logic
 - `README.md` → Summary of today's learning
 
 ---
@@ -150,3 +148,23 @@ On Sunday:
 - Complete full README summary with notes
 
 ---
+
+## ✅ JavaScript 30-Day Challenge
+
+### 📅 Day 7: Array Advanced Methods (Recap)
+
+**Covered Methods:**
+- `map()`
+- `filter()`
+- `reduce()`
+- `forEach()`
+- `find()`
+- `every()`
+- `some()`
+
+**✅ Status:**  
+- All concepts clear  
+- 10 custom practice questions solved with snapshot proof  
+- Skipped items from previous days also completed
+
+🟢 Moving to Day 8: Objects Basics next

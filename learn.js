@@ -297,56 +297,188 @@
 
 // Q1. Print all key–value pairs from this object:
 
-const user = { name: "Aman", age: 22, city: "Delhi" };
+// const user = { name: "Aman", age: 22, city: "Delhi" };
 
-for (let key in user) {
-  console.log(user[key]);
-}
+// for (let key in user) {
+//   console.log(user[key]);
+// }
 
 // Q2. Use nested destructuring to extract city from:
 
-const person = {
-  name: "John",
-  details: {
-    location: {
-      city: "Mumbai"
-    }
-  }
-};
+// const person = {
+//   name: "John",
+//   details: {
+//     location: {
+//       city: "Mumbai"
+//     }
+//   }
+// };
 
-const {details:{location: {city}}} = person;
+// const {details:{location: {city}}} = person;
 
-console.log("city:", city);
+// console.log("city:", city);
 
 // Q3. Calculate total of object values
 
-const expenses = { rent: 1200, food: 600, internet: 300 };
+// const expenses = { rent: 1200, food: 600, internet: 300 };
 
 // 👇 Loop + add all values using for...in
-let total = 0;
-for (let key in expenses) {
-  total += expenses[key];
-}
+// let total = 0;
+// for (let key in expenses) {
+//   total += expenses[key];
+// }
 
-console.log("Total Expenses:", total); // Output: 2100
+// console.log("Total Expenses:", total); // Output: 2100
 
 // Q4. Convert object to array using Object.entries()
-const products = { pen: 10, book: 50 };
+// const products = { pen: 10, book: 50 };
 
 // 👇 Object.entries() gives array of [key, value]
-const entries = Object.entries(products);
+// const entries = Object.entries(products);
 
-for (let [key, value] of entries) {
-  console.log(`${key} => ${value}`);
-}
+// for (let [key, value] of entries) {
+//   console.log(`${key} => ${value}`);
+// }
 
 // Q5. Check if object is empty
-const emptyObj = {};
+// const emptyObj = {};
 
 // 👇 Object.keys() returns array of keys
-if (Object.keys(emptyObj).length === 0) {
-  console.log("Empty");
-} else {
-  console.log("Not Empty");
-}
+// if (Object.keys(emptyObj).length === 0) {
+//   console.log("Empty");
+// } else {
+//   console.log("Not Empty");
+// }
 // Output: Empty
+
+// javaScript Day 7 recap
+
+// find(), some(), every()
+
+// find() Purpose: Returns first element that matches condition.
+
+const numsA = [10, 25, 30, 40];
+const found = numsA.find(num => num > 20);
+console.log(found); // 25
+
+// every() Purpose: Returns true if all elements pass the condition.
+
+const numsB = [2, 4, 6];
+const allEven = numsB.every(num => num % 2 === 0);
+console.log(allEven); // true
+
+// some() Purpose: Returns true if any element passes the condition.
+
+const numsC = [1, 3, 7];
+const hasEven = numsC.some(num => num % 2 === 0);
+console.log(hasEven); // false
+
+// Very light and less practice Questions
+
+//  Practice Q1: Find the first even number in the array
+
+const arr = [3, 7, 11, 18, 21];
+const findArr = arr.find(num => num % 2 === 0);
+console.log(findArr);
+
+//  Practice Q2: Check if all names in the array are longer than 3 characters
+
+const names = ["Aman", "Buddy", "Jay"];
+const checkNames = names.every(name => name.length >= 3 );
+console.log(checkNames);
+
+// Practice Q3: Check if there is any negative number in the array
+
+const data = [5, 7, -3, 9];
+const checkData = data.some(num => num < 0 );
+console.log(checkData);
+
+// Find () : Practice basics Questions
+
+// Q1: Find first string with length > 5
+
+const names1 = ["Jay", "Rohit", "Samantha", "Alok"];
+
+const higherThanFive = names1.find(name => name.length >= 5);
+console.log(higherThanFive);
+
+// Q2: Find first negative number
+
+const numbers1 = [10, -5, 20, -30, 50];
+
+const negNumber = numbers1 .find(num => num < 0);
+console.log(negNumber);
+
+// Q3: Find first object where isActive is true
+
+const users1 = [
+  { name: "Aman", isActive: false },
+  { name: "Buddy", isActive: true },
+  { name: "Jay", isActive: false }
+];
+
+const userActive = users1.find(users1 => users1.isActive);
+console.log(userActive);
+
+// Q4: Find first student with marks > 80
+
+const students = [
+  { name: "Ram", marks: 75 },
+  { name: "Shyam", marks: 82 },
+  { name: "Seeta", marks: 90 }
+];
+
+const middleStudent = students.find(students => students.marks > 80);
+console.log(middleStudent);
+
+// Q5: Find first even number after index 3
+
+const nums2 = [1, 3, 5, 7, 8, 10, 13];
+const firstEven = nums2.find((num, index) => index > 3 && num % 2 === 0);
+console.log(firstEven);
+
+// Every() : Basics Practice Questions
+
+// Q6: Check if all numbers are positive
+
+const nums3 = [2, 4, 6, 8];
+const arePositive = nums3.every(num => num > 1);
+console.log(arePositive);
+
+// Q7: Check if all names include letter "a"
+
+const names2 = ["Aman", "Anjali", "Karan"];
+const includeA = names2.every(name => name.includes("a"));
+console.log(includeA);
+
+// Q8: Check if all objects have age property
+
+const people = [
+  { name: "Ravi", age: 30 },
+  { name: "Meena", age: 25 },
+  { name: "Tom", age: 28 }
+];
+const haveAge = people.every(user => user.age);
+console.log(haveAge);
+
+// some() : 2 Baics Question Practice
+
+// Q9: Check if any user is admin
+
+const users2 = [
+  { username: "buddy", role: "user" },
+  { username: "aman", role: "admin" },
+  { username: "jay", role: "user" }
+];
+const ifUser = users2.some(user => {
+  if(user.role.includes("admin")){
+    console.log("Have Admin");
+  }
+});
+
+
+// Q10: Check if any word starts with capital letter
+
+const words = ["hello", "world", "ChatGPT", "coding"];
+const hasCapital = words.some(text => text[0] === text[0].toUpperCase());
+console.log(hasCapital);
