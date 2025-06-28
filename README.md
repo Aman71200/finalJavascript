@@ -136,6 +136,7 @@ Each solution includes comments to explain logic for later revision.
 
 ## ⏱️ Time Taken
 ~45 minutes (due to limited schedule)
+<br>
 ~this is not completed by me this was done by chat gpt my buddy my Ai coding teacher who guide me in my javaScript journey i am really not satisfied to do this butg actully i dont want to break my github streak but i promised in this sunday i will recover all my roadmap mistakes and fixed everything
 
 ---
@@ -148,6 +149,7 @@ On Sunday:
 - Complete full README summary with notes
 
 ---
+<<<<<<< HEAD
 
 ## ✅ JavaScript 30-Day Challenge
 
@@ -168,3 +170,5 @@ On Sunday:
 - Skipped items from previous days also completed
 
 🟢 Moving to Day 8: Objects Basics next
+=======
+>>>>>>> 79ba6e9a46dc6d085f69c91823b3950b1ed8b65f
