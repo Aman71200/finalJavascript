@@ -149,7 +149,6 @@ On Sunday:
 - Complete full README summary with notes
 
 ---
-<<<<<<< HEAD
 
 ## ✅ JavaScript 30-Day Challenge
 
@@ -170,5 +169,3 @@ On Sunday:
 - Skipped items from previous days also completed
 
 🟢 Moving to Day 8: Objects Basics next
-=======
->>>>>>> 79ba6e9a46dc6d085f69c91823b3950b1ed8b65f
