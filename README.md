@@ -169,3 +169,20 @@ On Sunday:
 - Skipped items from previous days also completed
 
 🟢 Moving to Day 8: Objects Basics next
+
+## 📅 JavaScript 30-Day Challenge
+
+### ✅ Day 8 - Object Methods
+
+| #  | Question                                             | Method Used             | Status   |
+| -- | ---------------------------------------------------- | ----------------------- | -------- |
+| Q1 | Count the number of keys in an object                | `Object.keys()`         | ✅ Solved |
+| Q2 | Get all values of the object                         | `Object.values()`       | ✅ Solved |
+| Q3 | Check if a key exists (`"price"`)                    | `hasOwnProperty()`      | ✅ Solved |
+| Q4 | Get all key-value pairs                              | `Object.entries()`      | ✅ Solved |
+| Q5 | Try changing a value after freezing the object       | `Object.freeze()`       | ✅ Solved |
+| Q6 | Change value and delete key after sealing the object | `Object.seal()`         | ✅ Solved |
+| Q7 | Check if title exists and its value is "JS Guide"    | `hasOwnProperty() + if` | ✅ Solved |
+
+
+🕔 **Next Study Time:** 5:00 PM today — _Day 9: Looping through Objects_

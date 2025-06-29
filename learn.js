@@ -229,46 +229,6 @@
 // let uniCode = "Mastering JS";
 // console.log(uniCode.charCodeAt(10));
 
-// ✅ Q1. Capitalize first letter of each word
-// Methods: split(), map(), charAt(), toUpperCase(), slice(), join()
-// Hint: Har word ko split karke, first letter uppercase karo, baaki slice lagao.
-
-// ✅ Q2. Anagram checker
-// Methods: split(), sort(), join()
-// Hint: Dono strings ko sort karke compare kar de.
-
-// ✅ Q3. Truncate sentence after 20 chars
-// Methods: slice(), length, if condition
-// Hint: Agar sentence ki length > 20, to slice(0, 20) + "..."
-
-// ✅ Q4. Count vowels
-// Methods: split(), filter(), includes()
-// Hint: Har letter check karo kya "aeiouAEIOU" me hai.
-
-// ✅ Q5. Generate username
-// Methods: toLowerCase(), split(), join()
-// Hint: Full name ko lowercase mein convert karo aur space ko . se replace karo.
-
-// ✅ Q6. Remove extra spaces
-// Methods: trim(), split(" "), filter(), join(" ")
-// Hint: Extra space hatane ke liye filter(word => word !== "") use kar.
-
-// ✅ Q7. Find longest word
-// Methods: split(" "), reduce() or forEach()
-// Hint: Har word ka length check karke sabse bada store karo.
-
-// ✅ Q8. Only alphabets?
-// Methods: test() with RegExp: /^[A-Za-z]+$/
-// Hint: Agar regex pass karta hai to true return karo.
-
-// ✅ Q9. Convert to camelCase
-// Methods: split(), map(), toUpperCase(), slice(), join("")
-// Hint: Pehla word chhodo, baaki ka pehla letter capitalize karke join karo.
-
-// ✅ Q10. Replace all digits with *
-// Methods: replace() with RegExp: /\d/g
-// Hint: Use .replace(/\d/g, "*")
-
 // JavaScript Day 7
 
 // Examples 
@@ -357,128 +317,307 @@
 
 // find() Purpose: Returns first element that matches condition.
 
-const numsA = [10, 25, 30, 40];
-const found = numsA.find(num => num > 20);
-console.log(found); // 25
+// const numsA = [10, 25, 30, 40];
+// const found = numsA.find(num => num > 20);
+// console.log(found); // 25
 
 // every() Purpose: Returns true if all elements pass the condition.
 
-const numsB = [2, 4, 6];
-const allEven = numsB.every(num => num % 2 === 0);
-console.log(allEven); // true
+// const numsB = [2, 4, 6];
+// const allEven = numsB.every(num => num % 2 === 0);
+// console.log(allEven); // true
 
 // some() Purpose: Returns true if any element passes the condition.
 
-const numsC = [1, 3, 7];
-const hasEven = numsC.some(num => num % 2 === 0);
-console.log(hasEven); // false
+// const numsC = [1, 3, 7];
+// const hasEven = numsC.some(num => num % 2 === 0);
+// console.log(hasEven); // false
 
 // Very light and less practice Questions
 
 //  Practice Q1: Find the first even number in the array
 
-const arr = [3, 7, 11, 18, 21];
-const findArr = arr.find(num => num % 2 === 0);
-console.log(findArr);
+// const arr = [3, 7, 11, 18, 21];
+// const findArr = arr.find(num => num % 2 === 0);
+// console.log(findArr);
 
 //  Practice Q2: Check if all names in the array are longer than 3 characters
 
-const names = ["Aman", "Buddy", "Jay"];
-const checkNames = names.every(name => name.length >= 3 );
-console.log(checkNames);
+// const names = ["Aman", "Buddy", "Jay"];
+// const checkNames = names.every(name => name.length >= 3 );
+// console.log(checkNames);
 
 // Practice Q3: Check if there is any negative number in the array
 
-const data = [5, 7, -3, 9];
-const checkData = data.some(num => num < 0 );
-console.log(checkData);
+// const data = [5, 7, -3, 9];
+// const checkData = data.some(num => num < 0 );
+// console.log(checkData);
 
 // Find () : Practice basics Questions
 
 // Q1: Find first string with length > 5
 
-const names1 = ["Jay", "Rohit", "Samantha", "Alok"];
+// const names1 = ["Jay", "Rohit", "Samantha", "Alok"];
 
-const higherThanFive = names1.find(name => name.length >= 5);
-console.log(higherThanFive);
+// const higherThanFive = names1.find(name => name.length >= 5);
+// console.log(higherThanFive);
 
 // Q2: Find first negative number
 
-const numbers1 = [10, -5, 20, -30, 50];
+// const numbers1 = [10, -5, 20, -30, 50];
 
-const negNumber = numbers1 .find(num => num < 0);
-console.log(negNumber);
+// const negNumber = numbers1 .find(num => num < 0);
+// console.log(negNumber);
 
 // Q3: Find first object where isActive is true
 
-const users1 = [
-  { name: "Aman", isActive: false },
-  { name: "Buddy", isActive: true },
-  { name: "Jay", isActive: false }
-];
+// const users1 = [
+//   { name: "Aman", isActive: false },
+//   { name: "Buddy", isActive: true },
+//   { name: "Jay", isActive: false }
+// ];
 
-const userActive = users1.find(users1 => users1.isActive);
-console.log(userActive);
+// const userActive = users1.find(users1 => users1.isActive);
+// console.log(userActive);
 
 // Q4: Find first student with marks > 80
 
-const students = [
-  { name: "Ram", marks: 75 },
-  { name: "Shyam", marks: 82 },
-  { name: "Seeta", marks: 90 }
-];
+// const students = [
+//   { name: "Ram", marks: 75 },
+//   { name: "Shyam", marks: 82 },
+//   { name: "Seeta", marks: 90 }
+// ];
 
-const middleStudent = students.find(students => students.marks > 80);
-console.log(middleStudent);
+// const middleStudent = students.find(students => students.marks > 80);
+// console.log(middleStudent);
 
 // Q5: Find first even number after index 3
 
-const nums2 = [1, 3, 5, 7, 8, 10, 13];
-const firstEven = nums2.find((num, index) => index > 3 && num % 2 === 0);
-console.log(firstEven);
+// const nums2 = [1, 3, 5, 7, 8, 10, 13];
+// const firstEven = nums2.find((num, index) => index > 3 && num % 2 === 0);
+// console.log(firstEven);
 
 // Every() : Basics Practice Questions
 
 // Q6: Check if all numbers are positive
 
-const nums3 = [2, 4, 6, 8];
-const arePositive = nums3.every(num => num > 1);
-console.log(arePositive);
+// const nums3 = [2, 4, 6, 8];
+// const arePositive = nums3.every(num => num > 1);
+// console.log(arePositive);
 
 // Q7: Check if all names include letter "a"
 
-const names2 = ["Aman", "Anjali", "Karan"];
-const includeA = names2.every(name => name.includes("a"));
-console.log(includeA);
+// const names2 = ["Aman", "Anjali", "Karan"];
+// const includeA = names2.every(name => name.includes("a"));
+// console.log(includeA);
 
 // Q8: Check if all objects have age property
 
-const people = [
-  { name: "Ravi", age: 30 },
-  { name: "Meena", age: 25 },
-  { name: "Tom", age: 28 }
-];
-const haveAge = people.every(user => user.age);
-console.log(haveAge);
+// const people = [
+//   { name: "Ravi", age: 30 },
+//   { name: "Meena", age: 25 },
+//   { name: "Tom", age: 28 }
+// ];
+// const haveAge = people.every(user => user.age);
+// console.log(haveAge);
 
 // some() : 2 Baics Question Practice
 
 // Q9: Check if any user is admin
 
-const users2 = [
-  { username: "buddy", role: "user" },
-  { username: "aman", role: "admin" },
-  { username: "jay", role: "user" }
-];
-const ifUser = users2.some(user => {
-  if(user.role.includes("admin")){
-    console.log("Have Admin");
-  }
-});
+// const users2 = [
+//   { username: "buddy", role: "user" },
+//   { username: "aman", role: "admin" },
+//   { username: "jay", role: "user" }
+// ];
+// const ifUser = users2.some(user => {
+//   if(user.role.includes("admin")){
+//     console.log("Have Admin");
+//   }
+// });
 
 
 // Q10: Check if any word starts with capital letter
 
-const words = ["hello", "world", "ChatGPT", "coding"];
-const hasCapital = words.some(text => text[0] === text[0].toUpperCase());
-console.log(hasCapital);
+// const words = ["hello", "world", "ChatGPT", "coding"];
+// const hasCapital = words.some(text => text[0] === text[0].toUpperCase());
+// console.log(hasCapital);
+
+// JavaScript Day 8
+
+// examples
+
+// 1. Object.keys(obj)
+// Returns array of keys
+
+const user = { name: "Buddy", age: 23 };
+console.log(Object.keys(user)); // ['name', 'age']
+
+// Use when: Tumhe object ke saare keys chahiye loop ya counting ke liye
+
+// 2. Object.values(obj)
+// Returns array of values
+
+console.log(Object.values(user)); // ['Buddy', 23]
+
+// Use when: Tumhe values chahiye print ya condition check ke liye
+
+// 3. Object.entries(obj)
+// Returns array of [key, value] pairs
+
+console.log(Object.entries(user));
+
+// [['name', 'Buddy'], ['age', 23]]
+// Use when: Tum loop se key + value dono use karna chahte ho
+
+// 4. in operator
+// Returns true if property exists (also in prototype)
+
+console.log('name' in user);  // true
+// Use when: Safe way to check key exists (even if value is undefined)
+
+// // 5. hasOwnProperty()
+// Same as in, but doesn't check inherited props
+
+console.log(user.hasOwnProperty('name')); // true
+// Use when: Tum sirf apne object ke direct keys check karna chahte ho
+
+// 6. Object.freeze(obj)
+// Freezes object – no add, remove, or change
+
+console.log(Object.freeze(user));
+user.age = 99;  // ❌ won't change
+
+//  Use when: Tum chahte ho koi data accidentally mutate na kare
+
+// 7. Object.seal(obj)
+// Can't add/remove properties, but can modify existing ones
+
+console.log(Object.seal(user));
+user.age = 30;     // ✅ allowed
+delete user.name;  // ❌ not allowed
+
+// Use when: Properties fix karni ho but values allow ho update
+
+// Day 8 Practice Questions
+
+// Q1: Print the number of properties in this object using Object.keys()
+
+const book = {
+  title: "JavaScript Mastery",
+  pages: 350,
+  author: "Aman Khan",
+  published: 2025
+};
+
+// Output should be: 4
+for(let [key, value] of Object.entries(book)){
+  console.log(`${key}: ${value}`);
+}
+
+// Q1. Use Object.keys() to get all keys of this object
+
+const mobile = {
+  brand: "OnePlus",
+  price: 30000,
+  color: "Blue"
+};
+console.log(Object.keys(mobile));
+
+// Output: ["brand", "price", "color"]
+
+// Q2. Use Object.values() to get all values
+
+console.log(Object.values(mobile));
+
+// Output: ["OnePlus", 30000, "Blue"]
+
+// Q3. Use Object.entries() to get key-value pairs
+
+console.log(Object.entries(mobile));
+
+// Output: [["brand", "OnePlus"], ["price", 30000], ["color", "Blue"]]
+
+// Q4. Use Object.freeze() to lock the object and try changing value
+
+Object.freeze(mobile);
+
+mobile.color = "Red";
+console.log(mobile.color);
+
+// Q5. Use Object.seal() and try updating & deleting a value
+
+const car = {
+  model : "Legend Alto",
+  year : 2003
+}
+Object.seal(car);
+car.year = "2025";
+car.model = "San Alto";
+console.log( car.model, car.year);
+
+// Q6. Use in and hasOwnProperty() to check if key exists
+
+const userFriend = {
+  name: "chomu",
+  age: 17
+}
+console.log("name" in userFriend );
+console.log(userFriend.hasOwnProperty("name"));
+console.log(userFriend.hasOwnProperty("data"));
+
+// practice Questions
+
+//  Q1. Count the number of keys using Object.keys()
+const food = {
+  name: "Burger",
+  price: 120,
+  isVeg: false
+};
+
+console.log(Object.keys(food));
+// Output: 3
+
+// Q2. Get all the values using Object.values()
+
+console.log(Object.values(food));
+
+// Q3. Check if key "price" exists using both in and hasOwnProperty()
+
+console.log(food.hasOwnProperty("price"));
+
+// Q4. Use Object.entries() to get all key-value pairs
+
+console.log(Object.entries(food));
+
+// Q5. Try changing a value after freezing the object
+
+const jsbook = {
+  title: "JS Guide",
+  pages: 300
+};
+
+Object.freeze(jsbook);
+jsbook.pages = 100;
+console.log(jsbook.pages);
+
+// Q6. Try changing a value and deleting a key after sealing the object
+
+const course = {
+  name: "JavaScript",
+  duration: "1 Year",
+  isFree: false
+}
+Object.seal(course);
+course.name = "Phython";
+course.duration = "6 months";
+course.isFree = false;
+console.log(course.name, course.duration, course.isFree);
+
+// Bonus (Q7): Write a condition that prints true only if title exists and its value is "JS Guide".
+
+if (jsbook.hasOwnProperty("title")) {
+  console.log("yes it has");
+} else {
+  console.log("not found");
+}
