@@ -621,3 +621,179 @@ if (jsbook.hasOwnProperty("title")) {
 } else {
   console.log("not found");
 }
+
+// Day 10: Destructuring
+
+// Q1: Array Destructuring Basics
+
+const numbers = [100, 200, 300, 400];
+
+// Destructure to get second and fourth values
+// and log them
+
+const [a,b,c,d] = numbers;
+console.log(b);
+console.log(d);
+
+// Q2: Skipping Values + Default
+
+const names = ["Buddy"];
+
+// Destructure to get:
+// // - first name as `firstName`// - second name as `lastName`, default "Unknown"
+const [first,second] = names;
+console.log(first);
+console.log(second);
+
+// Q3: Object Destructuring with Rename
+
+const product = {  id: 1,  title: "Shoes",  price: 999};
+
+// Destructure and rename:
+
+const {title: proTitle, price: proPrice} = product
+
+// Destructure and rename:
+console.log(proTitle); // - title → productName
+console.log(proPrice)// - price → productPrice
+console.log(proTitle, proPrice)// Then log both
+
+// Q4: Nested Object Destructuring
+
+const nestedUser = {
+  id: 101,
+  profile: {
+    username: "buddy007",
+    contact: {
+      email: "buddy@example.com"
+    }
+  }
+};
+
+// Destructure to extract just `email` in one line
+
+const {profile: email} = nestedUser;
+console.log(email);
+
+// Q5 (Challenge): Mixed Destructuring
+
+const response = {
+  status: 200,
+  data: [
+    { id: 1, name: "Alpha" },
+    { id: 2, name: "Beta" }
+  ]
+};
+
+const {
+  status: resStatus,
+  data: [
+    { name: firstName },
+    { id: secondId }
+  ]
+} = response;
+
+// Destructure to extract:
+console.log(resStatus); // - status code
+console.log(firstName); // - first item's name
+console.log(secondId)// - second item's id
+
+// Q6: Array Destructuring with Default + Rest
+
+const scores = [90, 80];
+const [topper,secondTop,backup = 60,...rest] = scores;
+// Destructure first score as `topper`, second as `secondTop`, 
+console.log(topper);
+console.log(secondTop);
+console.log(backup); // and third as `backup = 60` (default), 
+console.log(...rest);// then rest in `others`
+
+// Q7: Object Destructuring - Nested with Default & Rename
+
+const config = {
+  user: {
+    name: "Aman",
+    preferences: {
+      theme: "dark"
+    }
+  }
+};
+
+const {
+  user: {
+    name: userName,
+  preferences: {
+    theme: userTheme
+  }
+},
+  language: userLang = "en"
+} = config;
+
+// Destructure:
+console.log(userName); // - `name` → `userName`
+console.log(userTheme); // - `theme` → `userTheme`
+console.log(userLang); // - `language` → `userLang` (default: "en")
+
+// Q8: Deep Object + Array Destructuring
+
+const appData = {
+  version: "1.0",
+  contributors: [
+    { id: 1, username: "dev1" },
+    { id: 2, username: "dev2" }
+  ]
+};
+
+const {
+  version: appVersion,
+  contributors: [
+    {username: mainDev},
+    {id: supportId}
+  ]
+} = appData
+// Destructure:
+console.log(appVersion); // - version
+console.log(mainDev); // - first contributor's username → `mainDev`
+console.log(supportId); // - second contributor's id → `supportId`
+
+// Q9: Destructure Function Return Value
+
+function getUser() {
+  return {
+    id: 101,
+    email: "test@buddy.com",
+    isVerified: true
+  };
+}
+ 
+const { id,email: userEmail,isVerified: verifiedStatus } = getUser();
+
+// Destructure return value to get:
+console.log(id); // - id
+console.log(verifiedStatus); // - isVerified → renamed as `verifiedStatus`
+
+// Q10: (Challenge): Destructure + Combine
+
+const options = {
+  mode: "production",
+  plugins: ["auth", "cache"],
+  meta: {
+    createdBy: "buddy",
+    lastUpdate: "2025-06-30"
+  }
+};
+
+const {
+  mode, 
+  plugins: [firstPlugin, lastPlugin],
+  meta: {
+    createdBy,
+    lastUpdate: updateOn
+  }
+} = options
+
+// Destructure:
+console.log(mode); // - mode
+console.log(firstPlugin); // - first plugin as `firstPlugin`
+console.log(updateOn); // - lastUpdate as `updatedOn`
+console.log(`App in ${mode} by ${createdBy}, last updated ${updateOn}`); // Then print: `"App in MODE mode by CREATEDBY, last updated on UPDATEDON"`

@@ -186,3 +186,27 @@ On Sunday:
 
 
 🕔 **Next Study Time:** 5:00 PM today — _Day 9: Looping through Objects_
+
+# Day 10: JavaScript Destructuring Practice
+
+> 🔥 Completed Questions from Day 6 to Day 10  
+> Covers: Array Destructuring, Object Destructuring, Rename, Default, Rest, Nested, and Function Return Destructuring.
+
+---
+
+## ✅ Day 10 Practice Questions Table
+
+| No. | Title                                          | Status     |
+|-----|------------------------------------------------|------------|
+| Q1  | Array Destructuring Basics                     | ✅ Done     |
+| Q2  | Skipping Values + Default                      | ✅ Done     |
+| Q3  | Object Destructuring with Rename               | ✅ Done     |
+| Q4  | Nested Object Destructuring                    | ✅ Done     |
+| Q5  | Mixed Object + Array Destructuring             | ✅ Done     |
+| Q6  | Array Destructuring with Default + Rest        | ✅ Done     |
+| Q7  | Object Destructuring – Nested + Rename + Default | ✅ Done     |
+| Q8  | Object + Array Combined Destructuring          | ✅ Done     |
+| Q9  | Function Return Destructuring                  | ✅ Done     |
+| Q10 | Deep Destructuring + Combine (Challenge)       | ✅ Done     |
+
+---
