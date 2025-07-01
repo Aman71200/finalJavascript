@@ -210,3 +210,24 @@ On Sunday:
 | Q10 | Deep Destructuring + Combine (Challenge)       | ✅ Done     |
 
 ---
+
+### ✅ Day 11: Spread & Rest Operators
+
+| No. | Question                                                                 | Status |
+|-----|--------------------------------------------------------------------------|--------|
+| 1   | Clone array using spread                                                 | ✅ Done |
+| 2   | Merge two arrays using spread                                            | ✅ Done |
+| 3   | Copy object and add new key using spread                                 | ✅ Done |
+| 4   | Function using rest to calculate average                                 | ✅ Done |
+| 5   | Destructure array (rest items separately)                                | ✅ Done |
+| 6   | Destructure object using rest                                            | ✅ Done |
+| 7   | Merge objects with same keys                                             | ✅ Done |
+| 8   | Multiply any number of arguments using rest                              | ✅ Done |
+| 9   | Destructure array and skip middle items                                  | ✅ Done |
+| 10  | Destructure object (extract few, rest separately)                        | ✅ Done |
+| 11  | Function with named + rest parameters                                    | ✅ Done |
+| 12  | Merge 3 arrays using spread + remove duplicates                          | ✅ Done |
+| 13  | Function using rest + Math.max                                           | ✅ Done |
+| 14  | Destructure array and get A, B, F only                                   | ✅ Done |
+| 15  | Destructure nested object and collect rest                               | ✅ Done |
+| 16  | Function accepting fixed + rest arguments and logging                    | ✅ Done |

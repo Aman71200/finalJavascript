@@ -797,3 +797,167 @@ console.log(mode); // - mode
 console.log(firstPlugin); // - first plugin as `firstPlugin`
 console.log(updateOn); // - lastUpdate as `updatedOn`
 console.log(`App in ${mode} by ${createdBy}, last updated ${updateOn}`); // Then print: `"App in MODE mode by CREATEDBY, last updated on UPDATEDON"`
+
+// JavaScript Day 11
+
+//  ... spread opreator and rest 
+
+// Step 1 spread operator
+
+// Q1. Clone this array using spread:
+
+const original = [10, 20, 30];
+// Create a copy in variable: clone
+const clone = [...original];
+console.log(clone);
+
+// Q2. Merge two arrays using spread:
+
+const evens = [2, 4, 6];
+const odds = [1, 3, 5];
+// Merge and store in: allNums
+const allNums = [...evens, ...odds];
+console.log(allNums);
+
+// Q3. Copy this object and add a new key:
+
+const person = { name: "Aman", age: 25 };
+// Copy into newPerson and add country: "India"
+const newPerson = {...person, country: "India"};
+console.log(newPerson);
+
+// Step 2 Rest operator 
+
+// Q4. Write a function that accepts any number of numbers and returns their average:
+
+function acceptsNums(...nums){
+  const total = numbers.reduce((acc, val) => acc + val, 0);
+  return total / nums.length;
+}
+console.log(acceptsNums(1,3,4,45,5,6));
+
+// Q5. Destructure the array to get first two items separately, and rest in another variable:
+
+const colors = ["red", "blue", "green", "yellow", "black"];
+ const [firstColor, secondColor, ...color] = colors;
+ console.log(firstColor, secondColor);
+
+// Q6. Destructure this object and extract name, and put the rest in another object:
+
+const userDesture = {
+  name: "Elor",
+  age: 22,
+  role: "Admin",
+  location: "Earth"
+};
+
+// Use rest to store age, role, location
+const {name,...restDtc} = userDesture;
+console.log(restDtc);
+
+// Advanced Practice Set (Combo Style)
+
+// Q7. Clone and Modify
+
+const totalScores = [98, 87, 92];
+// Make a copy and add two more scores (75, 89) using spread
+// Expected: [98, 87, 92, 75, 89]
+
+const modifyScore = [...totalScores, ...rest, 75, 89 ];
+console.log(modifyScore);
+
+// Q7. Merge Multiple Objects with Same Keys
+
+const info1 = { name: "Aman", age: 25 };
+const info2 = { age: 26, country: "India" };
+// Merge into fullInfo. Which age will be kept?
+const allInfo = {...info1, ...info2};
+console.log(allInfo); // kept age is 26
+
+// Q8. Find the Product of Any Number of Arguments
+
+function multiplyAll(...nums) {
+  const totalMUtiply = nums.reduce((nums, val)=> nums * val);
+  return totalMUtiply;
+}
+console.log(multiplyAll(2, 3, 4)); // → 24
+
+// Q9. Destructure Array and Log Last 2 Items Using Rest
+
+const fruits = ["apple", "banana", "mango", "kiwi", "grapes"];
+// Destructure first 3 items separately, and put the rest in a new array
+const [fisrtFruit, secondFruit, thirdFruit, ...restFruits] = fruits;
+
+console.log(fisrtFruit, secondFruit, thirdFruit);
+console.log(...restFruits);
+
+// Q10. Destructure Object and Use Rest
+
+const dev = {
+  name: "Elor",
+  skill: "JavaScript",
+  level: "Pro",
+  language: "English"
+};
+// Extract skill and name, keep rest in another object
+const {name: devName, skill, ...restSkill} = dev;
+console.log(restSkill);
+
+// Q11. Function with Named Params + Rest
+function describePerson(name, age, ...hobbies) {
+  console.log(`"${name} is ${age} years old and loves: ${hobbies}"`);
+}
+describePerson("Aman", 22, "coding", "reading");
+
+//  Q12. Merge 3 arrays using spread and remove duplicate values
+
+const arr1 = [1, 2, 3];
+const arr2 = [2, 3, 4];
+const arr3 = [4, 5, 6];
+// Merge them and return unique values only
+
+const allArrs = [...arr1, ...arr2, ...arr3];
+console.log(allArrs);
+
+// Q13. Create a function that returns the maximum number passed
+function maxOfAll(...nums){
+  return Math.max(...nums);
+}
+console.log(maxOfAll(10, 45, 2, 89, 23)); // → 89
+
+// Q14. Destructure an array and skip middle items
+
+const letters = ["A", "B", "C", "D", "E", "F"];
+// Get A, B and F into variables, skip C–E using rest
+const [x,y, , , , f] = letters;
+console.log(x,y,f);
+
+//  Q15. Destructure nested object and collect rest inside
+const collectuser = {
+  id: 1,
+  name: "Aman",
+  location: {
+    city: "Delhi",
+    country: "India"
+  },
+  email: "aman@example.com"
+};
+// Extract name and city, keep rest in new object
+const {
+  name: username,
+  location: {
+    city
+  },
+  ...restCollect
+} = collectuser;
+console.log(username, city);
+
+// Q16. Create a function that accepts user info and extra properties
+function registerUser(name, email, ...restProps) {
+  console.log("Name:", name);
+  console.log("EmAIL:", email);
+  console.log("Othwer Properties", restProps);
+  // log name, email, and restProps as array
+}
+
+registerUser("Elor", "elor@mail.com", "India", 22, "Male");
