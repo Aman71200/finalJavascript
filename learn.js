@@ -450,22 +450,22 @@
 // 1. Object.keys(obj)
 // Returns array of keys
 
-const user = { name: "Buddy", age: 23 };
-console.log(Object.keys(user)); // ['name', 'age']
+// const user = { name: "Buddy", age: 23 };
+// console.log(Object.keys(user)); // ['name', 'age']
 
 // Use when: Tumhe object ke saare keys chahiye loop ya counting ke liye
 
 // 2. Object.values(obj)
 // Returns array of values
 
-console.log(Object.values(user)); // ['Buddy', 23]
+// console.log(Object.values(user)); // ['Buddy', 23]
 
 // Use when: Tumhe values chahiye print ya condition check ke liye
 
 // 3. Object.entries(obj)
 // Returns array of [key, value] pairs
 
-console.log(Object.entries(user));
+// console.log(Object.entries(user));
 
 // [['name', 'Buddy'], ['age', 23]]
 // Use when: Tum loop se key + value dono use karna chahte ho
@@ -473,29 +473,29 @@ console.log(Object.entries(user));
 // 4. in operator
 // Returns true if property exists (also in prototype)
 
-console.log('name' in user);  // true
+// console.log('name' in user);  // true
 // Use when: Safe way to check key exists (even if value is undefined)
 
 // // 5. hasOwnProperty()
 // Same as in, but doesn't check inherited props
 
-console.log(user.hasOwnProperty('name')); // true
+// console.log(user.hasOwnProperty('name')); // true
 // Use when: Tum sirf apne object ke direct keys check karna chahte ho
 
 // 6. Object.freeze(obj)
 // Freezes object – no add, remove, or change
 
-console.log(Object.freeze(user));
-user.age = 99;  // ❌ won't change
+// console.log(Object.freeze(user));
+// user.age = 99;  // ❌ won't change
 
 //  Use when: Tum chahte ho koi data accidentally mutate na kare
 
 // 7. Object.seal(obj)
 // Can't add/remove properties, but can modify existing ones
 
-console.log(Object.seal(user));
-user.age = 30;     // ✅ allowed
-delete user.name;  // ❌ not allowed
+// console.log(Object.seal(user));
+// user.age = 30;     // ✅ allowed
+// delete user.name;  // ❌ not allowed
 
 // Use when: Properties fix karni ho but values allow ho update
 
@@ -503,300 +503,300 @@ delete user.name;  // ❌ not allowed
 
 // Q1: Print the number of properties in this object using Object.keys()
 
-const book = {
-  title: "JavaScript Mastery",
-  pages: 350,
-  author: "Aman Khan",
-  published: 2025
-};
+// const book = {
+//   title: "JavaScript Mastery",
+//   pages: 350,
+//   author: "Aman Khan",
+//   published: 2025
+// };
 
 // Output should be: 4
-for(let [key, value] of Object.entries(book)){
-  console.log(`${key}: ${value}`);
-}
+// for(let [key, value] of Object.entries(book)){
+//   console.log(`${key}: ${value}`);
+// }
 
 // Q1. Use Object.keys() to get all keys of this object
 
-const mobile = {
-  brand: "OnePlus",
-  price: 30000,
-  color: "Blue"
-};
-console.log(Object.keys(mobile));
+// const mobile = {
+//   brand: "OnePlus",
+//   price: 30000,
+//   color: "Blue"
+// };
+// console.log(Object.keys(mobile));
 
 // Output: ["brand", "price", "color"]
 
 // Q2. Use Object.values() to get all values
 
-console.log(Object.values(mobile));
+// console.log(Object.values(mobile));
 
 // Output: ["OnePlus", 30000, "Blue"]
 
 // Q3. Use Object.entries() to get key-value pairs
 
-console.log(Object.entries(mobile));
+// console.log(Object.entries(mobile));
 
 // Output: [["brand", "OnePlus"], ["price", 30000], ["color", "Blue"]]
 
 // Q4. Use Object.freeze() to lock the object and try changing value
 
-Object.freeze(mobile);
+// Object.freeze(mobile);
 
-mobile.color = "Red";
-console.log(mobile.color);
+// mobile.color = "Red";
+// console.log(mobile.color);
 
 // Q5. Use Object.seal() and try updating & deleting a value
 
-const car = {
-  model : "Legend Alto",
-  year : 2003
-}
-Object.seal(car);
-car.year = "2025";
-car.model = "San Alto";
-console.log( car.model, car.year);
+// const car = {
+//   model : "Legend Alto",
+//   year : 2003
+// }
+// Object.seal(car);
+// car.year = "2025";
+// car.model = "San Alto";
+// console.log( car.model, car.year);
 
 // Q6. Use in and hasOwnProperty() to check if key exists
 
-const userFriend = {
-  name: "chomu",
-  age: 17
-}
-console.log("name" in userFriend );
-console.log(userFriend.hasOwnProperty("name"));
-console.log(userFriend.hasOwnProperty("data"));
+// const userFriend = {
+//   name: "chomu",
+//   age: 17
+// }
+// console.log("name" in userFriend );
+// console.log(userFriend.hasOwnProperty("name"));
+// console.log(userFriend.hasOwnProperty("data"));
 
 // practice Questions
 
 //  Q1. Count the number of keys using Object.keys()
-const food = {
-  name: "Burger",
-  price: 120,
-  isVeg: false
-};
+// const food = {
+//   name: "Burger",
+//   price: 120,
+//   isVeg: false
+// };
 
-console.log(Object.keys(food));
+// console.log(Object.keys(food));
 // Output: 3
 
 // Q2. Get all the values using Object.values()
 
-console.log(Object.values(food));
+// console.log(Object.values(food));
 
 // Q3. Check if key "price" exists using both in and hasOwnProperty()
 
-console.log(food.hasOwnProperty("price"));
+// console.log(food.hasOwnProperty("price"));
 
 // Q4. Use Object.entries() to get all key-value pairs
 
-console.log(Object.entries(food));
+// console.log(Object.entries(food));
 
 // Q5. Try changing a value after freezing the object
 
-const jsbook = {
-  title: "JS Guide",
-  pages: 300
-};
+// const jsbook = {
+//   title: "JS Guide",
+//   pages: 300
+// };
 
-Object.freeze(jsbook);
-jsbook.pages = 100;
-console.log(jsbook.pages);
+// Object.freeze(jsbook);
+// jsbook.pages = 100;
+// console.log(jsbook.pages);
 
 // Q6. Try changing a value and deleting a key after sealing the object
 
-const course = {
-  name: "JavaScript",
-  duration: "1 Year",
-  isFree: false
-}
-Object.seal(course);
-course.name = "Phython";
-course.duration = "6 months";
-course.isFree = false;
-console.log(course.name, course.duration, course.isFree);
+// const course = {
+//   name: "JavaScript",
+//   duration: "1 Year",
+//   isFree: false
+// }
+// Object.seal(course);
+// course.name = "Phython";
+// course.duration = "6 months";
+// course.isFree = false;
+// console.log(course.name, course.duration, course.isFree);
 
 // Bonus (Q7): Write a condition that prints true only if title exists and its value is "JS Guide".
 
-if (jsbook.hasOwnProperty("title")) {
-  console.log("yes it has");
-} else {
-  console.log("not found");
-}
+// if (jsbook.hasOwnProperty("title")) {
+//   console.log("yes it has");
+// } else {
+//   console.log("not found");
+// }
 
 // Day 10: Destructuring
 
 // Q1: Array Destructuring Basics
 
-const numbers = [100, 200, 300, 400];
+// const numbers = [100, 200, 300, 400];
 
 // Destructure to get second and fourth values
 // and log them
 
-const [a,b,c,d] = numbers;
-console.log(b);
-console.log(d);
+// const [a,b,c,d] = numbers;
+// console.log(b);
+// console.log(d);
 
 // Q2: Skipping Values + Default
 
-const names = ["Buddy"];
+// const names = ["Buddy"];
 
 // Destructure to get:
 // // - first name as `firstName`// - second name as `lastName`, default "Unknown"
-const [first,second] = names;
-console.log(first);
-console.log(second);
+// const [first,second] = names;
+// console.log(first);
+// console.log(second);
 
 // Q3: Object Destructuring with Rename
 
-const product = {  id: 1,  title: "Shoes",  price: 999};
+// const product = {  id: 1,  title: "Shoes",  price: 999};
 
 // Destructure and rename:
 
-const {title: proTitle, price: proPrice} = product
+// const {title: proTitle, price: proPrice} = product
 
 // Destructure and rename:
-console.log(proTitle); // - title → productName
-console.log(proPrice)// - price → productPrice
-console.log(proTitle, proPrice)// Then log both
+// console.log(proTitle); // - title → productName
+// console.log(proPrice)// - price → productPrice
+// console.log(proTitle, proPrice)// Then log both
 
 // Q4: Nested Object Destructuring
 
-const nestedUser = {
-  id: 101,
-  profile: {
-    username: "buddy007",
-    contact: {
-      email: "buddy@example.com"
-    }
-  }
-};
+// const nestedUser = {
+//   id: 101,
+//   profile: {
+//     username: "buddy007",
+//     contact: {
+//       email: "buddy@example.com"
+//     }
+//   }
+// };
 
 // Destructure to extract just `email` in one line
 
-const {profile: email} = nestedUser;
-console.log(email);
+// const {profile: email} = nestedUser;
+// console.log(email);
 
 // Q5 (Challenge): Mixed Destructuring
 
-const response = {
-  status: 200,
-  data: [
-    { id: 1, name: "Alpha" },
-    { id: 2, name: "Beta" }
-  ]
-};
+// const response = {
+//   status: 200,
+//   data: [
+//     { id: 1, name: "Alpha" },
+//     { id: 2, name: "Beta" }
+//   ]
+// };
 
-const {
-  status: resStatus,
-  data: [
-    { name: firstName },
-    { id: secondId }
-  ]
-} = response;
+// const {
+//   status: resStatus,
+//   data: [
+//     { name: firstName },
+//     { id: secondId }
+//   ]
+// } = response;
 
 // Destructure to extract:
-console.log(resStatus); // - status code
-console.log(firstName); // - first item's name
-console.log(secondId)// - second item's id
+// console.log(resStatus); // - status code
+// console.log(firstName); // - first item's name
+// console.log(secondId)// - second item's id
 
 // Q6: Array Destructuring with Default + Rest
 
-const scores = [90, 80];
-const [topper,secondTop,backup = 60,...rest] = scores;
+// const scores = [90, 80];
+// const [topper,secondTop,backup = 60,...rest] = scores;
 // Destructure first score as `topper`, second as `secondTop`, 
-console.log(topper);
-console.log(secondTop);
-console.log(backup); // and third as `backup = 60` (default), 
-console.log(...rest);// then rest in `others`
+// console.log(topper);
+// console.log(secondTop);
+// console.log(backup); // and third as `backup = 60` (default), 
+// console.log(...rest);// then rest in `others`
 
 // Q7: Object Destructuring - Nested with Default & Rename
 
-const config = {
-  user: {
-    name: "Aman",
-    preferences: {
-      theme: "dark"
-    }
-  }
-};
+// const config = {
+//   user: {
+//     name: "Aman",
+//     preferences: {
+//       theme: "dark"
+//     }
+//   }
+// };
 
-const {
-  user: {
-    name: userName,
-  preferences: {
-    theme: userTheme
-  }
-},
-  language: userLang = "en"
-} = config;
+// const {
+//   user: {
+//     name: userName,
+//   preferences: {
+//     theme: userTheme
+//   }
+// },
+//   language: userLang = "en"
+// } = config;
 
 // Destructure:
-console.log(userName); // - `name` → `userName`
-console.log(userTheme); // - `theme` → `userTheme`
-console.log(userLang); // - `language` → `userLang` (default: "en")
+// console.log(userName); // - `name` → `userName`
+// console.log(userTheme); // - `theme` → `userTheme`
+// console.log(userLang); // - `language` → `userLang` (default: "en")
 
 // Q8: Deep Object + Array Destructuring
 
-const appData = {
-  version: "1.0",
-  contributors: [
-    { id: 1, username: "dev1" },
-    { id: 2, username: "dev2" }
-  ]
-};
+// const appData = {
+//   version: "1.0",
+//   contributors: [
+//     { id: 1, username: "dev1" },
+//     { id: 2, username: "dev2" }
+//   ]
+// };
 
-const {
-  version: appVersion,
-  contributors: [
-    {username: mainDev},
-    {id: supportId}
-  ]
-} = appData
+// const {
+//   version: appVersion,
+//   contributors: [
+//     {username: mainDev},
+//     {id: supportId}
+//   ]
+// } = appData
 // Destructure:
-console.log(appVersion); // - version
-console.log(mainDev); // - first contributor's username → `mainDev`
-console.log(supportId); // - second contributor's id → `supportId`
+// console.log(appVersion); // - version
+// console.log(mainDev); // - first contributor's username → `mainDev`
+// console.log(supportId); // - second contributor's id → `supportId`
 
 // Q9: Destructure Function Return Value
 
-function getUser() {
-  return {
-    id: 101,
-    email: "test@buddy.com",
-    isVerified: true
-  };
-}
+// function getUser() {
+//   return {
+//     id: 101,
+//     email: "test@buddy.com",
+//     isVerified: true
+//   };
+// }
  
-const { id,email: userEmail,isVerified: verifiedStatus } = getUser();
+// const { id,email: userEmail,isVerified: verifiedStatus } = getUser();
 
 // Destructure return value to get:
-console.log(id); // - id
-console.log(verifiedStatus); // - isVerified → renamed as `verifiedStatus`
+// console.log(id); // - id
+// console.log(verifiedStatus); // - isVerified → renamed as `verifiedStatus`
 
 // Q10: (Challenge): Destructure + Combine
 
-const options = {
-  mode: "production",
-  plugins: ["auth", "cache"],
-  meta: {
-    createdBy: "buddy",
-    lastUpdate: "2025-06-30"
-  }
-};
+// const options = {
+//   mode: "production",
+//   plugins: ["auth", "cache"],
+//   meta: {
+//     createdBy: "buddy",
+//     lastUpdate: "2025-06-30"
+//   }
+// };
 
-const {
-  mode, 
-  plugins: [firstPlugin, lastPlugin],
-  meta: {
-    createdBy,
-    lastUpdate: updateOn
-  }
-} = options
+// const {
+//   mode, 
+//   plugins: [firstPlugin, lastPlugin],
+//   meta: {
+//     createdBy,
+//     lastUpdate: updateOn
+//   }
+// } = options
 
 // Destructure:
-console.log(mode); // - mode
-console.log(firstPlugin); // - first plugin as `firstPlugin`
-console.log(updateOn); // - lastUpdate as `updatedOn`
-console.log(`App in ${mode} by ${createdBy}, last updated ${updateOn}`); // Then print: `"App in MODE mode by CREATEDBY, last updated on UPDATEDON"`
+// console.log(mode); // - mode
+// console.log(firstPlugin); // - first plugin as `firstPlugin`
+// console.log(updateOn); // - lastUpdate as `updatedOn`
+// console.log(`App in ${mode} by ${createdBy}, last updated ${updateOn}`); // Then print: `"App in MODE mode by CREATEDBY, last updated on UPDATEDON"`
 
 // JavaScript Day 11
 
@@ -806,158 +806,266 @@ console.log(`App in ${mode} by ${createdBy}, last updated ${updateOn}`); // Then
 
 // Q1. Clone this array using spread:
 
-const original = [10, 20, 30];
+// const original = [10, 20, 30];
 // Create a copy in variable: clone
-const clone = [...original];
-console.log(clone);
+// const clone = [...original];
+// console.log(clone);
 
 // Q2. Merge two arrays using spread:
 
-const evens = [2, 4, 6];
-const odds = [1, 3, 5];
-// Merge and store in: allNums
-const allNums = [...evens, ...odds];
-console.log(allNums);
+// const evens = [2, 4, 6];
+// const odds = [1, 3, 5];
+// // Merge and store in: allNums
+// const allNums = [...evens, ...odds];
+// console.log(allNums);
 
 // Q3. Copy this object and add a new key:
 
-const person = { name: "Aman", age: 25 };
+// const person = { name: "Aman", age: 25 };
 // Copy into newPerson and add country: "India"
-const newPerson = {...person, country: "India"};
-console.log(newPerson);
+// const newPerson = {...person, country: "India"};
+// console.log(newPerson);
 
 // Step 2 Rest operator 
 
 // Q4. Write a function that accepts any number of numbers and returns their average:
 
-function acceptsNums(...nums){
-  const total = numbers.reduce((acc, val) => acc + val, 0);
-  return total / nums.length;
-}
-console.log(acceptsNums(1,3,4,45,5,6));
+// function acceptsNums(...nums){
+//   const total = numbers.reduce((acc, val) => acc + val, 0);
+//   return total / nums.length;
+// }
+// console.log(acceptsNums(1,3,4,45,5,6));
 
 // Q5. Destructure the array to get first two items separately, and rest in another variable:
 
-const colors = ["red", "blue", "green", "yellow", "black"];
- const [firstColor, secondColor, ...color] = colors;
- console.log(firstColor, secondColor);
+// const colors = ["red", "blue", "green", "yellow", "black"];
+//  const [firstColor, secondColor, ...color] = colors;
+//  console.log(firstColor, secondColor);
 
 // Q6. Destructure this object and extract name, and put the rest in another object:
 
-const userDesture = {
-  name: "Elor",
-  age: 22,
-  role: "Admin",
-  location: "Earth"
-};
+// const userDesture = {
+//   name: "Elor",
+//   age: 22,
+//   role: "Admin",
+//   location: "Earth"
+// };
 
-// Use rest to store age, role, location
-const {name,...restDtc} = userDesture;
-console.log(restDtc);
+// // Use rest to store age, role, location
+// const {name,...restDtc} = userDesture;
+// console.log(restDtc);
 
 // Advanced Practice Set (Combo Style)
 
 // Q7. Clone and Modify
 
-const totalScores = [98, 87, 92];
+// const totalScores = [98, 87, 92];
 // Make a copy and add two more scores (75, 89) using spread
 // Expected: [98, 87, 92, 75, 89]
 
-const modifyScore = [...totalScores, ...rest, 75, 89 ];
-console.log(modifyScore);
+// const modifyScore = [...totalScores, ...rest, 75, 89 ];
+// console.log(modifyScore);
 
 // Q7. Merge Multiple Objects with Same Keys
 
-const info1 = { name: "Aman", age: 25 };
-const info2 = { age: 26, country: "India" };
+// const info1 = { name: "Aman", age: 25 };
+// const info2 = { age: 26, country: "India" };
 // Merge into fullInfo. Which age will be kept?
-const allInfo = {...info1, ...info2};
-console.log(allInfo); // kept age is 26
+// const allInfo = {...info1, ...info2};
+// console.log(allInfo); // kept age is 26
 
 // Q8. Find the Product of Any Number of Arguments
 
-function multiplyAll(...nums) {
-  const totalMUtiply = nums.reduce((nums, val)=> nums * val);
-  return totalMUtiply;
-}
-console.log(multiplyAll(2, 3, 4)); // → 24
+// function multiplyAll(...nums) {
+//   const totalMUtiply = nums.reduce((nums, val)=> nums * val);
+//   return totalMUtiply;
+// }
+// console.log(multiplyAll(2, 3, 4)); // → 24
 
 // Q9. Destructure Array and Log Last 2 Items Using Rest
 
-const fruits = ["apple", "banana", "mango", "kiwi", "grapes"];
+// const fruits = ["apple", "banana", "mango", "kiwi", "grapes"]
 // Destructure first 3 items separately, and put the rest in a new array
-const [fisrtFruit, secondFruit, thirdFruit, ...restFruits] = fruits;
+// const [fisrtFruit, secondFruit, thirdFruit, ...restFruits] = fruits;
 
-console.log(fisrtFruit, secondFruit, thirdFruit);
-console.log(...restFruits);
+// console.log(fisrtFruit, secondFruit, thirdFruit);
+// console.log(...restFruits);
 
 // Q10. Destructure Object and Use Rest
 
-const dev = {
-  name: "Elor",
-  skill: "JavaScript",
-  level: "Pro",
-  language: "English"
-};
-// Extract skill and name, keep rest in another object
-const {name: devName, skill, ...restSkill} = dev;
-console.log(restSkill);
+// const dev = {
+//   name: "Elor",
+//   skill: "JavaScript",
+//   level: "Pro",
+//   language: "English"
+// };
+// // Extract skill and name, keep rest in another object
+// const {name: devName, skill, ...restSkill} = dev;
+// console.log(restSkill);
 
 // Q11. Function with Named Params + Rest
-function describePerson(name, age, ...hobbies) {
-  console.log(`"${name} is ${age} years old and loves: ${hobbies}"`);
-}
-describePerson("Aman", 22, "coding", "reading");
+// function describePerson(name, age, ...hobbies) {
+//   console.log(`"${name} is ${age} years old and loves: ${hobbies}"`);
+// }
+// describePerson("Aman", 22, "coding", "reading");
 
 //  Q12. Merge 3 arrays using spread and remove duplicate values
 
-const arr1 = [1, 2, 3];
-const arr2 = [2, 3, 4];
-const arr3 = [4, 5, 6];
+// const arr1 = [1, 2, 3];
+// const arr2 = [2, 3, 4];
+// const arr3 = [4, 5, 6];
 // Merge them and return unique values only
 
-const allArrs = [...arr1, ...arr2, ...arr3];
-console.log(allArrs);
+// const allArrs = [...arr1, ...arr2, ...arr3];
+// console.log(allArrs);
 
 // Q13. Create a function that returns the maximum number passed
-function maxOfAll(...nums){
-  return Math.max(...nums);
-}
-console.log(maxOfAll(10, 45, 2, 89, 23)); // → 89
+// function maxOfAll(...nums){
+//   return Math.max(...nums);
+// }
+// console.log(maxOfAll(10, 45, 2, 89, 23)); // → 89
 
 // Q14. Destructure an array and skip middle items
 
-const letters = ["A", "B", "C", "D", "E", "F"];
+// const letters = ["A", "B", "C", "D", "E", "F"];
 // Get A, B and F into variables, skip C–E using rest
-const [x,y, , , , f] = letters;
-console.log(x,y,f);
+// const [x,y, , , , f] = letters;
+// console.log(x,y,f);
 
 //  Q15. Destructure nested object and collect rest inside
-const collectuser = {
-  id: 1,
-  name: "Aman",
-  location: {
-    city: "Delhi",
-    country: "India"
-  },
-  email: "aman@example.com"
-};
-// Extract name and city, keep rest in new object
-const {
-  name: username,
-  location: {
-    city
-  },
-  ...restCollect
-} = collectuser;
-console.log(username, city);
+// const collectuser = {
+//   id: 1,
+//   name: "Aman",
+//   location: {
+//     city: "Delhi",
+//     country: "India"
+//   },
+//   email: "aman@example.com"
+// };
+// // Extract name and city, keep rest in new object
+// const {
+//   name: username,
+//   location: {
+//     city
+//   },
+//   ...restCollect
+// } = collectuser;
+// console.log(username, city);
 
 // Q16. Create a function that accepts user info and extra properties
-function registerUser(name, email, ...restProps) {
-  console.log("Name:", name);
-  console.log("EmAIL:", email);
-  console.log("Othwer Properties", restProps);
-  // log name, email, and restProps as array
-}
+// function registerUser(name, email, ...restProps) {
+//   console.log("Name:", name);
+//   console.log("EmAIL:", email);
+//   console.log("Othwer Properties", restProps);
+//   // log name, email, and restProps as array
+// }
 
-registerUser("Elor", "elor@mail.com", "India", 22, "Male");
+// registerUser("Elor", "elor@mail.com", "India", 22, "Male");
+
+// Day 12 – JavaScript 30-Day Challenge
+
+// Today Practice Questions
+
+// Q1: Access any element by ID and change its textContent.
+// Q2: Use querySelector() to select a div and change its style.backgroundColor.
+// Q3: Use getElementsByClassName() and log the length.
+// Q4: Create a <p> tag from JS and add it to the DOM.
+// Q5: Remove an element from the DOM using .remove().
+
+let container = document.getElementById("box");
+let box  = document.querySelector("h1");
+box.style.color = "red";
+let btn = document.getElementById("btn");;
+btn.addEventListener("click", function(){
+  box.textContent = "Hello Aman!";
+});
+let parah = document.getElementsByClassName("someclass");
+console.log("count length:", parah.length);
+let ptag = document.createElement("p");
+ptag.textContent = "Hello this is my first Dom topic!"
+container.appendChild(ptag);
+ptag.remove();
+
+// Mini Project Idea: Interactive List Generator
+
+// You’ll build this:
+
+// Ek input box aur button hoga
+// User koi item likhega, click karega
+// Wo item list me add ho jayega
+// Har item ke sath delete button bhi hoga
+// Click se item delete hoga
+
+// Step 1 Selet HTML Elements
+
+let addBtn = document.getElementById("addBtn");
+let input = document.getElementById("itemInput");
+let list = document.getElementById("itemList");
+
+addBtn.addEventListener("click", function(){
+  let value = input.value.trim();
+  if(value === "") return;
+  
+  // Step 2 Create List
+  
+  let li = document.createElement("li");
+  li.textContent = value;
+  
+  // Step 3 Create Delete Button 
+  
+  let DeleteBtn = document.createElement("button");
+  DeleteBtn.textContent = "X";
+  DeleteBtn.style.marginLeft = "10px";
+  
+  // Step 4 Add EventListner in Delete Button
+  
+  DeleteBtn.addEventListener("click", function (){
+    li.remove();
+  });
+  
+  // Step 5 Append button  to li and li to ul
+  
+  li.appendChild(DeleteBtn);
+  list.appendChild(li);
+  
+  // Clear inpuit
+  input.value = "";
+});
+
+// Mini Task 3 – Toggle Background Color
+
+// Step 1 Slect Html Button
+
+let toggleBtn = document.getElementById("toggleBtn");
+
+// Step 2 Add EventListner
+
+toggleBtn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+});
+
+//  Mini Task 4 – Show/Hide Password
+
+// Step 1 select Html elements 
+
+let passInput = document.getElementById("passInput");
+let showPass = document.getElementById("showPass");
+
+// step 2 Add EventListner in input
+
+showPass.addEventListener("change", function () {
+  passInput.type = this.checked ? "text" : "password";
+});
+
+//  Mini Task 5 – Character Counter
+
+// Step 1 select Html elements 
+
+let messageBox = document.getElementById("messageBox");
+let charCount = document.getElementById("charcount");
+
+// step 2 Add EventListner in input
+
+messageBox.addEventListener("input" , function () {
+  charCount.textContent = `Characters: ${this.value.length}`;
+});

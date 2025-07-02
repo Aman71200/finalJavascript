@@ -231,3 +231,31 @@ On Sunday:
 | 14  | Destructure array and get A, B, F only                                   | ✅ Done |
 | 15  | Destructure nested object and collect rest                               | ✅ Done |
 | 16  | Function accepting fixed + rest arguments and logging                    | ✅ Done |
+
+---
+
+## 📅 Day 12 – DOM Basics & Mini Project Tasks
+
+### 🔧 Practice Questions
+
+| No. | Task Description                                                       | Status |
+|-----|------------------------------------------------------------------------|--------|
+| Q1  | Access element by ID and change `textContent`                         | ✅ Done |
+| Q2  | Use `querySelector()` and change background color                     | ✅ Done |
+| Q3  | Use `getElementsByClassName()` and log length                         | ✅ Done |
+| Q4  | Create `<p>` from JS and add to DOM                                   | ✅ Done |
+| Q5  | Remove an element from DOM using `.remove()`                          | ✅ Done |
+
+---
+
+### 🚀 Mini DOM Tasks
+
+| Task No. | Title                        | Description                                  | Status |
+|----------|------------------------------|----------------------------------------------|--------|
+| Task 1   | Interactive List Generator   | Add items to list                            | ✅ Done |
+| Task 2   | List Item Delete Button      | Delete item on button click                  | ✅ Done |
+| Task 3   | Theme Toggle (Dark Mode)     | Toggle body class using `classList.toggle()` | ✅ Done |
+| Task 4   | Show/Hide Password           | Toggle input type with checkbox              | ✅ Done |
+| Task 5   | Character Counter            | Live update character count while typing     | ✅ Done |
+
+---
