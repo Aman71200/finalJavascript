@@ -972,19 +972,19 @@
 // Q4: Create a <p> tag from JS and add it to the DOM.
 // Q5: Remove an element from the DOM using .remove().
 
-let container = document.getElementById("box");
-let box  = document.querySelector("h1");
-box.style.color = "red";
-let btn = document.getElementById("btn");;
-btn.addEventListener("click", function(){
-  box.textContent = "Hello Aman!";
-});
-let parah = document.getElementsByClassName("someclass");
-console.log("count length:", parah.length);
-let ptag = document.createElement("p");
-ptag.textContent = "Hello this is my first Dom topic!"
-container.appendChild(ptag);
-ptag.remove();
+// let container = document.getElementById("box");
+// let box  = document.querySelector("h1");
+// box.style.color = "red";
+// let btn = document.getElementById("btn");;
+// btn.addEventListener("click", function(){
+//   box.textContent = "Hello Aman!";
+// });
+// let parah = document.getElementsByClassName("someclass");
+// console.log("count length:", parah.length);
+// let ptag = document.createElement("p");
+// ptag.textContent = "Hello this is my first Dom topic!"
+// container.appendChild(ptag);
+// ptag.remove();
 
 // Mini Project Idea: Interactive List Generator
 
@@ -998,74 +998,152 @@ ptag.remove();
 
 // Step 1 Selet HTML Elements
 
-let addBtn = document.getElementById("addBtn");
-let input = document.getElementById("itemInput");
-let list = document.getElementById("itemList");
+// let addBtn = document.getElementById("addBtn");
+// let input = document.getElementById("itemInput");
+// let list = document.getElementById("itemList");
 
-addBtn.addEventListener("click", function(){
-  let value = input.value.trim();
-  if(value === "") return;
+// addBtn.addEventListener("click", function(){
+//   let value = input.value.trim();
+//   if(value === "") return;
   
   // Step 2 Create List
   
-  let li = document.createElement("li");
-  li.textContent = value;
+  // let li = document.createElement("li");
+  // li.textContent = value;
   
   // Step 3 Create Delete Button 
   
-  let DeleteBtn = document.createElement("button");
-  DeleteBtn.textContent = "X";
-  DeleteBtn.style.marginLeft = "10px";
+  // let DeleteBtn = document.createElement("button");
+  // DeleteBtn.textContent = "X";
+  // DeleteBtn.style.marginLeft = "10px";
   
   // Step 4 Add EventListner in Delete Button
   
-  DeleteBtn.addEventListener("click", function (){
-    li.remove();
-  });
+  // DeleteBtn.addEventListener("click", function (){
+  //   li.remove();
+  // });
   
   // Step 5 Append button  to li and li to ul
   
-  li.appendChild(DeleteBtn);
-  list.appendChild(li);
+  // li.appendChild(DeleteBtn);
+  // list.appendChild(li);
   
   // Clear inpuit
-  input.value = "";
-});
+//   input.value = "";
+// });
 
 // Mini Task 3 – Toggle Background Color
 
 // Step 1 Slect Html Button
 
-let toggleBtn = document.getElementById("toggleBtn");
+// let toggleBtn = document.getElementById("toggleBtn");
 
 // Step 2 Add EventListner
 
-toggleBtn.addEventListener("click", function () {
-  document.body.classList.toggle("dark-mode");
-});
+// toggleBtn.addEventListener("click", function () {
+//   document.body.classList.toggle("dark-mode");
+// });
 
 //  Mini Task 4 – Show/Hide Password
 
 // Step 1 select Html elements 
 
-let passInput = document.getElementById("passInput");
-let showPass = document.getElementById("showPass");
+// let passInput = document.getElementById("passInput");
+// let showPass = document.getElementById("showPass");
 
 // step 2 Add EventListner in input
 
-showPass.addEventListener("change", function () {
-  passInput.type = this.checked ? "text" : "password";
-});
+// showPass.addEventListener("change", function () {
+//   passInput.type = this.checked ? "text" : "password";
+// });
 
 //  Mini Task 5 – Character Counter
 
 // Step 1 select Html elements 
 
-let messageBox = document.getElementById("messageBox");
-let charCount = document.getElementById("charcount");
+// let messageBox = document.getElementById("messageBox");
+// let charCount = document.getElementById("charcount");
 
 // step 2 Add EventListner in input
 
-messageBox.addEventListener("input" , function () {
-  charCount.textContent = `Characters: ${this.value.length}`;
+// messageBox.addEventListener("input" , function () {
+//   charCount.textContent = `Characters: ${this.value.length}`;
+// });
+
+// Day 13 of 30 Days JavaScript Challenge
+
+// DOM Manipulation
+
+// Task 1: Create and Append an Element in the DOM
+
+// Stwp 1: Select Html Element
+
+// let box = document.getElementById("box");
+
+// Step 2: Create <p></p> in javaScript and append it in box
+
+// let passage = document.createElement("p");
+// passage.textContent = "hello today is day 13 of learning javaScript complet Basics in 30 Days!";
+// box.append(passage);
+
+// Task 2: Remove an Element from the DOM on Button Click
+
+// let removeBtn = document.getElementById("removeBtn");
+// removeBtn.addEventListener("click", function () {
+//   passage.remove();
+// });
+
+// Task 3: Toggle Class using .classList.toggle()
+
+// Select Element
+
+// let themeBtn = document.getElementById("themeBtn");
+
+// Step 2: add eventListner and toggle to themeBtn
+
+// themeBtn.addEventListener("click", function () {
+//   document.body.classList.toggle("dark-side");
+// });
+
+// Mini Practice Project A basic Calculator
+
+let buttons = ["C", "1", "2", "3", "5", "6", "7", "8", "9", "0","+", "-", "*", "/", "="];
+
+let container = document.getElementById("buttons-container");
+
+// Add buttons using js
+
+buttons.forEach(function (label) {
+  let btn = document.createElement("button");
+  btn.innerText = label;
+  btn.classList.add("btn");
+
+  btn.addEventListener("click", function () {
+    handleClick(label);
+  });
+
+  container.appendChild(btn);
 });
+
+let display = document.getElementById("display");
+let currentValue = "";
+
+function handleClick(label) {
+  if (label === "C") {
+    currentValue = "";
+    display.value = "";
+
+  } else if (label === "=") {
+    try {
+      currentValue = eval(currentValue);
+      display.value = currentValue;
+    } catch (error) {
+      display.value = "Error";
+      currentValue = "";
+    }
+  }
+  else {
+    currentValue += label;
+    display.value = currentValue;
+  }
+}

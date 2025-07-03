@@ -259,3 +259,19 @@ On Sunday:
 | Task 5   | Character Counter            | Live update character count while typing     | ✅ Done |
 
 ---
+
+## ✅ Day 13 - DOM Manipulation
+
+| #  | Task                                      | Status |
+|----|-------------------------------------------|--------|
+| 1  | Create Element & Append in DOM            | ✅ Done |
+| 2  | Remove Element on Button Click            | ✅ Done |
+| 3  | Toggle Class using `.classList.toggle()`  | ✅ Done |
+| 4  | 💡 Mini Project - Calculator (DOM + JS)    | ✅ Done |
+
+> ➤ Buttons created dynamically via JS loop  
+> ➤ Full logic in `handleClick()`  
+> ➤ Calculator styled in dark theme  
+> ➤ All functions handled ( + - * / = C )  
+
+---
