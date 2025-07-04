@@ -310,6 +310,3 @@ Today’s focus was on learning and practicing advanced JavaScript DOM event han
 - Understood `event` object: `e.target`, `e.key`, `e.type`
 - Implemented **event delegation** using a single listener on `ul`
 - Applied real-world UI logic like theme toggle using event listeners.
-
----#   D a y   1 4      E v e n t   L i s t e n e r s   ( A d v a n c e d   U s a g e )  
- 
