@@ -1107,43 +1107,45 @@
 
 // Mini Practice Project A basic Calculator
 
-let buttons = ["C", "1", "2", "3", "5", "6", "7", "8", "9", "0","+", "-", "*", "/", "="];
+// let buttons = ["C", "1", "2", "3", "5", "6", "7", "8", "9", "0","+", "-", "*", "/", "="];
 
-let container = document.getElementById("buttons-container");
+// let container = document.getElementById("buttons-container");
 
 // Add buttons using js
 
-buttons.forEach(function (label) {
-  let btn = document.createElement("button");
-  btn.innerText = label;
-  btn.classList.add("btn");
+// buttons.forEach(function (label) {
+//   let btn = document.createElement("button");
+//   btn.innerText = label;
+//   btn.classList.add("btn");
 
-  btn.addEventListener("click", function () {
-    handleClick(label);
-  });
+//   btn.addEventListener("click", function () {
+//     handleClick(label);
+//   });
 
-  container.appendChild(btn);
-});
+//   container.appendChild(btn);
+// });
 
-let display = document.getElementById("display");
-let currentValue = "";
+// let display = document.getElementById("display");
+// let currentValue = "";
 
-function handleClick(label) {
-  if (label === "C") {
-    currentValue = "";
-    display.value = "";
+// function handleClick(label) {
+//   if (label === "C") {
+//     currentValue = "";
+//     display.value = "";
 
-  } else if (label === "=") {
-    try {
-      currentValue = eval(currentValue);
-      display.value = currentValue;
-    } catch (error) {
-      display.value = "Error";
-      currentValue = "";
-    }
-  }
-  else {
-    currentValue += label;
-    display.value = currentValue;
-  }
-}
+//   } else if (label === "=") {
+//     try {
+//       currentValue = eval(currentValue);
+//       display.value = currentValue;
+//     } catch (error) {
+//       display.value = "Error";
+//       currentValue = "";
+//     }
+//   }
+//   else {
+//     currentValue += label;
+//     display.value = currentValue;
+//   }
+// }
+
+// Day 14 Focus: DOM Event Listeners (Advanced Usage) + Mini Features

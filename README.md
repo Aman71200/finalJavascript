@@ -275,3 +275,41 @@ On Sunday:
 > ➤ All functions handled ( + - * / = C )  
 
 ---
+
+# Day 14 – Event Listeners (Advanced Usage)
+
+Today’s focus was on learning and practicing advanced JavaScript DOM event handling techniques including mouse, keyboard, and delegated events.
+
+---
+
+## ✅ Tasks Completed
+
+| Task No. | Description                                                       | Status |
+|----------|-------------------------------------------------------------------|--------|
+| 1️⃣       | Button click → alert shows event type                            | ✅     |
+| 2️⃣       | Box → on `mouseenter`, change background color                   | ✅     |
+| 3️⃣       | Detect and show pressed key on screen                            | ✅     |
+| 4️⃣       | Multiple buttons → show their text on click                      | ✅     |
+| 5️⃣       | Event delegation: UL → one click listener for all LIs            | ✅     |
+| 6️⃣       | Theme toggle button → switch between Light and Dark modes        | ✅     |
+
+---
+
+## 🔧 Mini Feature Built:
+- Theme Toggle (Light/Dark) using button click
+- Applied `.dark-side` class using JS and styled it using CSS
+
+---
+
+
+---
+
+## 📌 Learning Summary:
+
+- Used `addEventListener()` to attach various events like `click`, `mouseenter`, `keydown`.
+- Understood `event` object: `e.target`, `e.key`, `e.type`
+- Implemented **event delegation** using a single listener on `ul`
+- Applied real-world UI logic like theme toggle using event listeners.
+
+---#   D a y   1 4      E v e n t   L i s t e n e r s   ( A d v a n c e d   U s a g e )  
+ 
