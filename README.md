@@ -310,3 +310,17 @@ Today’s focus was on learning and practicing advanced JavaScript DOM event han
 - Understood `event` object: `e.target`, `e.key`, `e.type`
 - Implemented **event delegation** using a single listener on `ul`
 - Applied real-world UI logic like theme toggle using event listeners.
+
+---
+
+# Day 15 — Event Bubbling, Capturing & Delegation
+
+| Task No. | Description                                                                 |
+|----------|-----------------------------------------------------------------------------|
+| Task 1   | Create a parent `<div>` with 3 buttons. Use **event delegation** to detect which button is clicked. |
+| Task 2   | Use **bubbling** to log both parent and child click events.                 |
+| Task 3   | Add **capturing listener** to `body` and log `"Captured at body"` before bubbling starts. |
+| Task 4   | Dynamically add list items using JavaScript and use **delegation** to handle their click events. |
+| Task 5   | Prevent event from reaching parent using **`stopPropagation()`** to stop bubbling. |
+
+---
