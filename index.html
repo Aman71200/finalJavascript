@@ -65,33 +65,51 @@
 
      <!-- Task 1: Button click → alert + event type -->
 
-     <butotn id="alertBtn">Click Me!</butotn>
+     <!-- <butotn id="alertBtn">Click Me!</butotn> -->
 
      <!-- Task 2: Box → on mouseenter change color -->
 
-     <div class="container" style="width: 300px; height: 300px; background: #ccc; display: flex; justify-self: center;"></div>
+     <!-- <div class="container" style="width: 300px; height: 300px; background: #ccc; display: flex; justify-self: center;"></div> -->
 
      <!-- Task 3: Show pressed keyboard key in DOM -->
 
-     <p class="output">Press Any Key</p>
+     <!-- <p class="output">Press Any Key</p> -->
      
      <!-- Task 4: Multiple buttons → show innerText -->
 
-     <button class="multiBtn">Button ONE</button>
+     <!-- <button class="multiBtn">Button ONE</button>
      <button class="multiBtn">Button Two</button>
-     <button class="multiBtn">Button Three</button>
+     <button class="multiBtn">Button Three</button> -->
 
      <!-- Task 5: UL with LI → only one listener (delegation) -->
 
-     <ul>
+     <!-- <ul>
        <li>Apple</li>
        <li>Banana</li>
        <li>Cherry</li>
-     </ul>
+     </ul> -->
 
      <!-- Task 6: Toggle theme (light/dark) via button -->
 
-     <button id="tgbtn">Dark Mode</button>
+     <!-- <button id="tgbtn">Dark Mode</button> -->
+
+     <!-- Day 15 — Event Bubbling, Capturing & Delegation -->
+
+     <!-- Task 1: Create a parent <div> with 3 buttons inside it. Use event delegation to detect which button is clicked. -->
+     
+      <div id="parentBtn">
+         <button id="threeBtn">Button 1</button>
+         <button id="threeBtn">Button 2</button>
+         <button id="threeBtn">Button 3</button>
+      </div>
+
+      <!-- Task 4: Dynamically add list items (<li>) using JS, and still make sure they respond to clicks using delegation. -->
+      
+         <ul id="box">
+            <li id="child">Apple</li>
+            <li id="child">Mango</li>
+            <li id="child">banana</li>
+         </ul>
 
 </body>
 <script src="learn.js"></script>
