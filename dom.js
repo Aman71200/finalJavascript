@@ -139,11 +139,31 @@ form.addEventListener("submit", function (event) {
     } else {
         alert(`Thank you ${name}, we’ll contact you at ${email}!`);
     }
-
+    
     console.log("Form submitted:");
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Message:", message);
+    
+    // Day 17: localStorage in JavaScript
+
+    // Step 1: On Submit, JS se save karo:
+
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+
+    // Step 3: Page reload hone par:
+
+    const savedName = localStorage.getItem("name");
+    const savedEmail = localStorage.getItem("email");
+
+    console.log("Saved Name:", savedName);
+    console.log("Saved Email:", savedEmail);
+
+    document.getElementById("name").value = savedName;
+    document.getElementById("email").value = savedEmail;
+
+    alert(`Saved! Hello, ${name}!`);
 
     form.reset();
 });

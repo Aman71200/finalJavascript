@@ -325,48 +325,61 @@ Today’s focus was on learning and practicing advanced JavaScript DOM event han
 
 ---
 
-**Day 16: Form Handling (HTML + JS DOM)**  
+**Day 16–17: Form Handling + Local Storage**
+
+---
 
 ## ✅ Topics Covered:
+
+### 🧩 Day 16: Form Handling (HTML + JS DOM)
 - HTML Form Basics (`form`, `input`, `textarea`, `button`)
 - JS DOM Selection and Event Handling
 - `submit` event with `preventDefault()`
 - `.value.trim()` for safe input
 - Input validation using `if-else`
-- Showing custom alert messages
+- Showing alert messages on validation / success
 - Resetting form with `form.reset()`
-- Disabling default browser validation via `novalidate`
+- Using `novalidate` to bypass default browser validation
+
+### 🗂️ Day 17: LocalStorage in JavaScript
+- Understanding `localStorage` as browser-side storage
+- `setItem()` to save form data
+- `getItem()` to retrieve saved data
+- Prefilling form fields on page load using saved data
+- `console.log()` to debug and verify storage
+- Showing alert after saving
 
 ---
 
-## 🧪 Practice Task - Contact Form with Validation
+## 🧪 Practice Task - Contact Form with Local Storage
 
 ### 🎯 Goal:
-Create a contact form that:
-- Collects user name, email, and message
-- Validates all fields are filled
-- Shows alert:  
-  `Thank you [name], we’ll contact you at [email]!`
-- Clears form after submit
-
-### 🧱 Tech Used:
-- HTML
-- CSS (basic layout + hover effect)
-- JavaScript (DOM + Events)
+Make a contact form that:
+- Takes Name, Email, and Message
+- Validates that all fields are filled
+- Saves Name and Email to `localStorage` on submit
+- On page reload:
+  - Input fields are auto-filled using saved data
+- Shows alerts:
+  - If missing: `"All fields are required"`
+  - If success: `"Saved! Hello, [name]!"`
 
 ---
 
-## 📋 Task Table (Day 16)
+## 📋 Task Table (Day 16 & 17)
 
-| Task No. | Task Description                            | Status |
-|----------|----------------------------------------------|--------|
-| 1        | Build basic contact form in HTML             | ✅ Done |
-| 2        | Style form with simple CSS                   | ✅ Done |
-| 3        | Handle form submit with JS                   | ✅ Done |
-| 4        | Prevent page reload                          | ✅ Done |
-| 5        | Validate inputs via JS                       | ✅ Done |
-| 6        | Show alert on successful submission          | ✅ Done |
-| 7        | Clear form after submit                      | ✅ Done |
-| 8        | Disable browser validation using `novalidate`| ✅ Done |
+| Task No. | Task Description                                      | Status |
+|----------|--------------------------------------------------------|--------|
+| 1        | Build basic contact form in HTML                       | ✅ Done |
+| 2        | Style form with simple CSS                             | ✅ Done |
+| 3        | Handle form submit with JS                             | ✅ Done |
+| 4        | Prevent page reload                                    | ✅ Done |
+| 5        | Validate inputs via JS                                 | ✅ Done |
+| 6        | Show alert on success / error                          | ✅ Done |
+| 7        | Clear form after submit                                | ✅ Done |
+| 8        | Disable browser validation using `novalidate`          | ✅ Done |
+| 9        | Save name & email to localStorage                      | ✅ Done |
+| 10       | Pre-fill form fields from localStorage on page reload  | ✅ Done |
+| 11       | Log saved data in console for confirmation             | ✅ Done |
 
 ---
