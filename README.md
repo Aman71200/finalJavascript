@@ -324,3 +324,49 @@ Today’s focus was on learning and practicing advanced JavaScript DOM event han
 | Task 5   | Prevent event from reaching parent using **`stopPropagation()`** to stop bubbling. |
 
 ---
+
+**Day 16: Form Handling (HTML + JS DOM)**  
+
+## ✅ Topics Covered:
+- HTML Form Basics (`form`, `input`, `textarea`, `button`)
+- JS DOM Selection and Event Handling
+- `submit` event with `preventDefault()`
+- `.value.trim()` for safe input
+- Input validation using `if-else`
+- Showing custom alert messages
+- Resetting form with `form.reset()`
+- Disabling default browser validation via `novalidate`
+
+---
+
+## 🧪 Practice Task - Contact Form with Validation
+
+### 🎯 Goal:
+Create a contact form that:
+- Collects user name, email, and message
+- Validates all fields are filled
+- Shows alert:  
+  `Thank you [name], we’ll contact you at [email]!`
+- Clears form after submit
+
+### 🧱 Tech Used:
+- HTML
+- CSS (basic layout + hover effect)
+- JavaScript (DOM + Events)
+
+---
+
+## 📋 Task Table (Day 16)
+
+| Task No. | Task Description                            | Status |
+|----------|----------------------------------------------|--------|
+| 1        | Build basic contact form in HTML             | ✅ Done |
+| 2        | Style form with simple CSS                   | ✅ Done |
+| 3        | Handle form submit with JS                   | ✅ Done |
+| 4        | Prevent page reload                          | ✅ Done |
+| 5        | Validate inputs via JS                       | ✅ Done |
+| 6        | Show alert on successful submission          | ✅ Done |
+| 7        | Clear form after submit                      | ✅ Done |
+| 8        | Disable browser validation using `novalidate`| ✅ Done |
+
+---
