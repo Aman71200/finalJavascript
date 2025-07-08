@@ -167,3 +167,56 @@ form.addEventListener("submit", function (event) {
 
     form.reset();
 });
+
+// Day 18 – setTimeout() & setInterval()
+
+// Q1: 1 Basic setTimeout Show message after 3 seconds.
+
+setTimeout(() => {
+    console.log("Hello! i'm late!");
+}, 3000);
+
+
+// Q2: Basic setInterval Print counter every second.
+
+// let sec = 0;
+// setInterval(() => {
+//     console.log(`Sec: ${sec}`);
+//     sec++;
+// }, 1000);
+
+// Q3: Countdown Timer Build a countdown from 10 to 0.
+
+let num = 10; 
+let id = setInterval(() =>{
+    console.log(num)
+    num--;
+    if (num < 0) clearInterval(id);
+}, 1000);
+
+// Q4:	Auto Text Changer Change text every 2s from array values.
+
+let texts = ["Welcome", "To", "JavaScript", "30 Days", "Challenge"];
+let i = 0;
+setInterval(() => {
+    document.getElementById("text").innerText = texts[i];
+    i = (i + 1) % texts.length;
+}, 2000);
+
+// Q5: Stop Interval on Click Use clearInterval() on button click.
+
+// let count = 1;
+// let timerCount = setInterval(() => {
+//     document.getElementById("timer").innerText = count;
+//     count++;
+// }, 1000);
+
+// Use clearInterval() on button click.
+
+//  Q6 Popup Reminder Timer	Show a popup after 5s using setTimeout.
+
+document.getElementById("stopBtn").addEventListener("click", () => {    
+    clearInterval(timerCount);
+    alert("Timer End: " + count);
+});
+

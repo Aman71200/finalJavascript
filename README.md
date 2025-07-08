@@ -383,3 +383,49 @@ Make a contact form that:
 | 11       | Log saved data in console for confirmation             | ✅ Done |
 
 ---
+
+# Day 18 – JavaScript Timing Functions
+
+Today’s focus was on mastering:
+- `setTimeout()`
+- `setInterval()`
+- `clearTimeout()` and `clearInterval()`
+- Countdown logic
+- DOM integration with timers
+
+---
+
+## ✅ Questions & Status
+
+| No. | Question                                         | Status  |
+|-----|--------------------------------------------------|---------|
+| Q1  | Basic `setTimeout` – Show message after 3s       | ✅ Done |
+| Q2  | Basic `setInterval` – Print counter every sec    | ✅ Fixed |
+| Q3  | Countdown Timer – 10 to 0                        | ✅ Done |
+| Q4  | Auto Text Changer – Change text every 2s         | ✅ Done |
+| Q5  | Stop Interval on Click (with DOM & Button)       | ✅ Done |
+| Q6  | Popup Reminder Timer using `setTimeout()`        | ✅ Merged with Q5 |
+
+---
+
+## 🧠 Key Concepts Learned
+
+- Delayed execution using `setTimeout`
+- Repeating execution using `setInterval`
+- Timer cancellation using `clearTimeout` & `clearInterval`
+- DOM manipulation with timers
+- Smart logic: merging alert with dynamic control
+
+---
+
+## 📁 Commit Message
+
+
+---
+
+## 🚀 Output Preview
+
+- Countdown timer with console logs
+- Auto changing text in DOM
+- Counter running with stop button
+- Alert shown on button click
