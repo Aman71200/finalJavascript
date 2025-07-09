@@ -1148,4 +1148,76 @@
 //   }
 // }
 
-// Day 14 Focus: DOM Event Listeners (Advanced Usage) + Mini Features
+// Day 14 to 18 in dom.js
+
+// Day 19: Callback Functions in JavaScript
+
+// Q1: Make a function displayResult(num, callback) that squares the number and then calls the callback to print result.
+
+function displayResult(num, callback){
+  let result = num *num;
+  // Q2: Use setTimeout() to simulate a task with delay, and call a callback after 2 seconds.
+  setTimeout(() => {
+    callback(result);
+    }, 2000);
+}
+
+function printResult(res){
+  console.log("Squared Result is: " + res);
+};
+
+displayResult(5, printResult);
+
+// Q3: Create your own calculator(a, b, operationCallback) - where operation can be add, subtract, etc.
+
+function calculator(a, b, callback){
+  callback(a,b);
+}
+
+function add (x, y){
+   console.log("Numbers is Added:", x + y);
+}
+
+function subtract (x, y){
+   console.log("Substract", x - y);
+}
+
+calculator(10, 23, add);
+calculator(32, 24, subtract);
+
+// Q4: Write a function askUser(callback) which takes name via prompt (for browser) and then calls the callback with the name.
+
+function greetUser(callback){
+  let name = prompt("Enter Your Name");
+  callback(name);
+}
+
+function userGreet(username){
+  console.log("Hello " + username + "!");
+}
+
+greetUser(userGreet);
+
+// Q5: Use forEach() to loop over an array and call a callback that logs each item.
+
+let fruits = ["apple", "banana", "cherry"];
+
+function item(item){
+  console.log("Fruits: " + item);
+}
+
+fruits.forEach(item);
+
+// Q6: Delayed Welcome Notification
+
+function callUser(name, callback){
+  setTimeout(() => {
+    callback(name);
+  }, 2000);
+}
+
+function userCall(name){
+    console.log("Hello user: " + name + "!");
+}
+
+callUser("Aman",userCall);

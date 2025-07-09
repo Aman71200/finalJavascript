@@ -429,3 +429,33 @@ Today’s focus was on mastering:
 - Auto changing text in DOM
 - Counter running with stop button
 - Alert shown on button click
+
+--- 
+
+# 📅 Day 19 – Callback Functions in JavaScript
+
+### ✅ Topics Covered:
+- Callback Function Basics
+- Passing callback as parameter
+- Asynchronous callback using `setTimeout`
+- Real-world usage with `prompt()`
+- `forEach()` with callback
+- Delayed execution with named arguments
+
+---
+
+### 🧠 Q&A Summary:
+
+| Q.No | Description                                                                 | Status  |
+|------|-----------------------------------------------------------------------------|---------|
+| Q1   | `displayResult(num, callback)` – squares a number and prints using callback | ✅ Done |
+| Q2   | Simulate 2s delay using `setTimeout()` then call a callback                 | ✅ Done |
+| Q3   | `calculator(a, b, operationCallback)` – supports add/subtract using callback | ✅ Done |
+| Q4   | Take username via `prompt()` and greet using callback                       | ✅ Done |
+| Q5   | Use `forEach()` to loop and callback to log each array item                 | ✅ Done |
+| Q6   | Delayed welcome using `setTimeout()` and callback with name param           | ✅ Done |
+
+---
+
+### 🧾 Commit Message:
+Finished my day with no guilt.

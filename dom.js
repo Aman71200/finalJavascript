@@ -121,60 +121,60 @@
 
 // Practice Task Contact Form with Validation
 
-const form = document.getElementById("contactForm");
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
+// const form = document.getElementById("contactForm");
+// form.addEventListener("submit", function (event) {
+//     event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    const altbutton = document.getElementById("submitBtn");
+//     const name = document.getElementById("name").value.trim();
+//     const email = document.getElementById("email").value.trim();
+//     const message = document.getElementById("message").value.trim();
+//     const altbutton = document.getElementById("submitBtn");
     // altbutton.addEventListener("submit", function () {
     //     alert("Thank you [name], we’ll contact you at [email]!");
     // })
 
-    if (name === "" || email === "" || message === "") {
-        alert("All Fields Are Required");
-        return;
-    } else {
-        alert(`Thank you ${name}, we’ll contact you at ${email}!`);
-    }
+//     if (name === "" || email === "" || message === "") {
+//         alert("All Fields Are Required");
+//         return;
+//     } else {
+//         alert(`Thank you ${name}, we’ll contact you at ${email}!`);
+//     }
     
-    console.log("Form submitted:");
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+//     console.log("Form submitted:");
+//     console.log("Name:", name);
+//     console.log("Email:", email);
+//     console.log("Message:", message);
     
-    // Day 17: localStorage in JavaScript
+//     // Day 17: localStorage in JavaScript
 
-    // Step 1: On Submit, JS se save karo:
+//     // Step 1: On Submit, JS se save karo:
 
-    localStorage.setItem("name", name);
-    localStorage.setItem("email", email);
+//     localStorage.setItem("name", name);
+//     localStorage.setItem("email", email);
 
-    // Step 3: Page reload hone par:
+//     // Step 3: Page reload hone par:
 
-    const savedName = localStorage.getItem("name");
-    const savedEmail = localStorage.getItem("email");
+//     const savedName = localStorage.getItem("name");
+//     const savedEmail = localStorage.getItem("email");
 
-    console.log("Saved Name:", savedName);
-    console.log("Saved Email:", savedEmail);
+//     console.log("Saved Name:", savedName);
+//     console.log("Saved Email:", savedEmail);
 
-    document.getElementById("name").value = savedName;
-    document.getElementById("email").value = savedEmail;
+//     document.getElementById("name").value = savedName;
+//     document.getElementById("email").value = savedEmail;
 
-    alert(`Saved! Hello, ${name}!`);
+//     alert(`Saved! Hello, ${name}!`);
 
-    form.reset();
-});
+//     form.reset();
+// });
 
 // Day 18 – setTimeout() & setInterval()
 
 // Q1: 1 Basic setTimeout Show message after 3 seconds.
 
-setTimeout(() => {
-    console.log("Hello! i'm late!");
-}, 3000);
+// setTimeout(() => {
+//     console.log("Hello! i'm late!");
+// }, 3000);
 
 
 // Q2: Basic setInterval Print counter every second.
@@ -187,21 +187,21 @@ setTimeout(() => {
 
 // Q3: Countdown Timer Build a countdown from 10 to 0.
 
-let num = 10; 
-let id = setInterval(() =>{
-    console.log(num)
-    num--;
-    if (num < 0) clearInterval(id);
-}, 1000);
+// let num = 10; 
+// let id = setInterval(() =>{
+//     console.log(num)
+//     num--;
+//     if (num < 0) clearInterval(id);
+// }, 1000);
 
 // Q4:	Auto Text Changer Change text every 2s from array values.
 
-let texts = ["Welcome", "To", "JavaScript", "30 Days", "Challenge"];
-let i = 0;
-setInterval(() => {
-    document.getElementById("text").innerText = texts[i];
-    i = (i + 1) % texts.length;
-}, 2000);
+// let texts = ["Welcome", "To", "JavaScript", "30 Days", "Challenge"];
+// let i = 0;
+// setInterval(() => {
+//     document.getElementById("text").innerText = texts[i];
+//     i = (i + 1) % texts.length;
+// }, 2000);
 
 // Q5: Stop Interval on Click Use clearInterval() on button click.
 
@@ -215,8 +215,7 @@ setInterval(() => {
 
 //  Q6 Popup Reminder Timer	Show a popup after 5s using setTimeout.
 
-document.getElementById("stopBtn").addEventListener("click", () => {    
-    clearInterval(timerCount);
-    alert("Timer End: " + count);
-});
-
+// document.getElementById("stopBtn").addEventListener("click", () => {    
+//     clearInterval(timerCount);
+//     alert("Timer End: " + count);
+// });
