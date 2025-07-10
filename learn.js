@@ -1154,70 +1154,214 @@
 
 // Q1: Make a function displayResult(num, callback) that squares the number and then calls the callback to print result.
 
-function displayResult(num, callback){
-  let result = num *num;
+// function displayResult(num, callback){
+//   let result = num *num;
   // Q2: Use setTimeout() to simulate a task with delay, and call a callback after 2 seconds.
-  setTimeout(() => {
-    callback(result);
-    }, 2000);
-}
+//   setTimeout(() => {
+//     callback(result);
+//     }, 2000);
+// }
 
-function printResult(res){
-  console.log("Squared Result is: " + res);
-};
+// function printResult(res){
+//   console.log("Squared Result is: " + res);
+// };
 
-displayResult(5, printResult);
+// displayResult(5, printResult);
 
 // Q3: Create your own calculator(a, b, operationCallback) - where operation can be add, subtract, etc.
 
-function calculator(a, b, callback){
-  callback(a,b);
-}
+// function calculator(a, b, callback){
+//   callback(a,b);
+// }
 
-function add (x, y){
-   console.log("Numbers is Added:", x + y);
-}
+// function add (x, y){
+//    console.log("Numbers is Added:", x + y);
+// }
 
-function subtract (x, y){
-   console.log("Substract", x - y);
-}
+// function subtract (x, y){
+//    console.log("Substract", x - y);
+// }
 
-calculator(10, 23, add);
-calculator(32, 24, subtract);
+// calculator(10, 23, add);
+// calculator(32, 24, subtract);
 
 // Q4: Write a function askUser(callback) which takes name via prompt (for browser) and then calls the callback with the name.
 
-function greetUser(callback){
-  let name = prompt("Enter Your Name");
-  callback(name);
-}
+// function greetUser(callback){
+//   let name = prompt("Enter Your Name");
+//   callback(name);
+// }
 
-function userGreet(username){
-  console.log("Hello " + username + "!");
-}
+// function userGreet(username){
+//   console.log("Hello " + username + "!");
+// }
 
-greetUser(userGreet);
+// greetUser(userGreet);
 
 // Q5: Use forEach() to loop over an array and call a callback that logs each item.
 
-let fruits = ["apple", "banana", "cherry"];
+// let fruits = ["apple", "banana", "cherry"];
 
-function item(item){
-  console.log("Fruits: " + item);
-}
+// function item(item){
+//   console.log("Fruits: " + item);
+// }
 
-fruits.forEach(item);
+// fruits.forEach(item);
 
 // Q6: Delayed Welcome Notification
 
-function callUser(name, callback){
-  setTimeout(() => {
-    callback(name);
-  }, 2000);
+// function callUser(name, callback){
+//   setTimeout(() => {
+//     callback(name);
+//   }, 2000);
+// }
+
+// function userCall(name){
+//     console.log("Hello user: " + name + "!");
+// }
+
+// callUser("Aman",userCall);
+
+//  Day 20: JavaScript Promises
+
+// promise syntrax 
+
+// const myPromise = new Promise((resolve, reject) => {
+//   // async task
+// });
+
+// Q1: Create a simple Promise that resolves after 2 seconds with a message.
+
+// function delayedSms (){
+//   return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve("Task completed after 2 seconds!");
+//       }, 2000);
+//   });
+// }
+
+// delayedSms().then((msg) => console.log(msg));
+
+// Q2: Create a function that returns a promise, and it resolves or rejects based on a boolean value.
+
+function checkStatus(isSuccess){
+  return new Promise((resolve, reject) => {
+    let status = isSuccess;
+    if (status === true) {
+    resolve("Operation successful!");
+  } else {
+    reject("Operation failed.");
+  }
+  });
 }
 
-function userCall(name){
-    console.log("Hello user: " + name + "!");
-}
+checkStatus(true)
+.then(msg => console.log("✅", msg))
+.catch(err => console.log("❌", err));
 
-callUser("Aman",userCall);
+// Q3: Promise chaining - do step-by-step kaam ek hi promise chain mein karo.
+
+// function stepOne(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Step One Completed!");
+//       }, 1000);
+//   });
+// };
+
+// function stepTwo(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // resolve("Step Two Completed!");
+//         reject("Step Two failed.");
+//       }, 2000);
+//   });
+// };
+
+
+// function stepThree(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Step Three Completed!");
+//       }, 3000);
+//   });
+// };
+
+// stepOne()
+// .then(msg1 => {
+//   console.log(msg1);
+//   return stepTwo();
+// })
+// .then(msg2 => {
+//   console.log(msg2);
+//   return stepThree();
+// })
+// .then(msg3 => {
+//     console.log(msg3);
+// })
+// .catch(err => {
+//   console.log(err);
+// });
+
+// Q4: Promise.all() - Run Multiple Promises in Parallel
+
+function taskOne(){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Task One done");
+      }, 1000);
+  });
+};
+
+function taskTwo(){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("task Two Done!");
+      }, 2000);
+    });
+  };
+  
+  
+  function taskThree(){
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("task Three Done!");
+      }, 3000);
+  });
+};
+
+Promise.all([taskOne(), taskTwo(), taskThree()])
+.then(msg => console.log(msg))
+.catch(err => console.log(err));
+
+// Q5: Promise.race() - Fastest promise jeetega, baaki ignore honge
+
+
+function blinkit(){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Order Delivered From: BlinkIt ");
+      }, 4000);
+  });
+};
+
+function zomato(){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Order Delivered From: Zomato");
+      }, 2000);
+    });
+  };
+  
+  
+  function swiggy(){
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("Order Delivered From: Swiggy");
+      }, 1000);
+  });
+};
+
+Promise.race([blinkit(), zomato(), swiggy()])
+.then(msg => console.log(msg))
+.catch(err => console.log(err));

@@ -459,3 +459,57 @@ Today’s focus was on mastering:
 
 ### 🧾 Commit Message:
 Finished my day with no guilt.
+
+---
+
+# 📅 Day 20 – JavaScript Promises
+
+Today I practiced **JavaScript Promises** and covered the following topics with examples:
+
+### ✅ Topics Covered:
+- Creating Promises using `new Promise(resolve, reject)`
+- Using `.then()` and `.catch()` for handling success/failure
+- Conditional `resolve()` / `reject()` flow
+- Promise chaining for sequential steps
+- `Promise.all()` for parallel execution
+- `Promise.race()` to get the fastest response
+
+---
+
+| Day | Topic     | Status  | Key Concepts |
+|-----|-----------|---------|--------------|
+| 20  | Promises  | ✅ Done | Basic resolve/reject, .then, .catch, chaining, Promise.all(), Promise.race() |
+
+
+---
+
+### 🔢 Questions Solved:
+
+| Q.No | Topic               | Task Description                                     | Status   |
+|------|---------------------|------------------------------------------------------|----------|
+| Q1   | Basic Promise        | Delay task using setTimeout and resolve message     | ✅ Done   |
+| Q2   | Conditional Promise | Resolve/reject based on boolean input               | ✅ Done   |
+| Q3   | Promise Chaining    | Chain 3 steps using `.then()` sequentially          | ✅ Done   |
+| Q4   | Promise.all()       | Run 3 promises in parallel, wait for all results    | ✅ Done   |
+| Q5   | Promise.race()      | Run 3 promises, return result of fastest one        | ✅ Done   |
+
+---
+
+### 🧠 Learning:
+- Promises make async behavior manageable and predictable.
+- `.then()` handles success, `.catch()` handles error — must be chained.
+- `Promise.all()` waits for all; `Promise.race()` picks the fastest.
+- Great control over when and how async code executes.
+
+---
+
+### 🔗 Commit Message:
+
+Finished my day with no guilt.
+
+---
+
+## 🔜 Next Up (Day 21):
+> `async/await` – Learn how to simplify promise-based code using `async` and `await` keywords with real examples.
+
+---
