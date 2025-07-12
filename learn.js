@@ -1244,20 +1244,20 @@
 
 // Q2: Create a function that returns a promise, and it resolves or rejects based on a boolean value.
 
-function checkStatus(isSuccess){
-  return new Promise((resolve, reject) => {
-    let status = isSuccess;
-    if (status === true) {
-    resolve("Operation successful!");
-  } else {
-    reject("Operation failed.");
-  }
-  });
-}
+// function checkStatus(isSuccess){
+//   return new Promise((resolve, reject) => {
+//     let status = isSuccess;
+//     if (status === true) {
+//     resolve("Operation successful!");
+//   } else {
+//     reject("Operation failed.");
+//   }
+//   });
+// }
 
-checkStatus(true)
-.then(msg => console.log("✅", msg))
-.catch(err => console.log("❌", err));
+// checkStatus(true)
+// .then(msg => console.log("✅", msg))
+// .catch(err => console.log("❌", err));
 
 // Q3: Promise chaining - do step-by-step kaam ek hi promise chain mein karo.
 
@@ -1305,63 +1305,181 @@ checkStatus(true)
 
 // Q4: Promise.all() - Run Multiple Promises in Parallel
 
-function taskOne(){
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Task One done");
-      }, 1000);
-  });
-};
+// function taskOne(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Task One done");
+//       }, 1000);
+//   });
+// };
 
-function taskTwo(){
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("task Two Done!");
-      }, 2000);
-    });
-  };
+// function taskTwo(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("task Two Done!");
+//       }, 2000);
+//     });
+//   };
   
   
-  function taskThree(){
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("task Three Done!");
-      }, 3000);
-  });
-};
+//   function taskThree(){
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve("task Three Done!");
+//       }, 3000);
+//   });
+// };
 
-Promise.all([taskOne(), taskTwo(), taskThree()])
-.then(msg => console.log(msg))
-.catch(err => console.log(err));
+// Promise.all([taskOne(), taskTwo(), taskThree()])
+// .then(msg => console.log(msg))
+// .catch(err => console.log(err));
 
 // Q5: Promise.race() - Fastest promise jeetega, baaki ignore honge
 
 
-function blinkit(){
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Order Delivered From: BlinkIt ");
-      }, 4000);
-  });
-};
+// function blinkit(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Order Delivered From: BlinkIt ");
+//       }, 4000);
+//   });
+// };
 
-function zomato(){
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Order Delivered From: Zomato");
-      }, 2000);
-    });
+// function zomato(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Order Delivered From: Zomato");
+//       }, 2000);
+//     });
+//   };
+  
+  
+//   function swiggy(){
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve("Order Delivered From: Swiggy");
+//       }, 1000);
+//   });
+// };
+
+// Promise.race([blinkit(), zomato(), swiggy()])
+// .then(msg => console.log(msg))
+// .catch(err => console.log(err));
+
+// Day 21 of JavaScript
+
+// Q1. GitHub Profile Fetcher
+
+async function fetchProfile() {
+    const user = document.getElementById('username').value;
+    const result = document.getElementById('result');
+
+    try {
+      const res = await fetch(`https://api.github.com/users/${user}`);
+      const data = await res.json();
+
+      result.innerHTML = `
+        Name: ${data.name} <br>
+        Public Repos: ${data.public_repos}
+      `;
+    } catch (err) {
+      result.innerText = "User not found or network error.";
+    }
+  }
+
+// async function fetchGithub() {
+
+//   // Select Html tags
+
+//   const username = document.getElementById("github").value;
+//   const result = document.getElementById("result");
+
+//   // Fetch github Api
+
+//   try {
+//     const res = await fetch('https://api.github.com/users/${user}');
+//     const data = await res.json();
+
+//     result.innerHTML = 
+//     ` Name: ${data.name} <br>
+//       Public Repos: ${data.public_repos}`
+
+//   } catch (error) {
+//     result.innerText = "User not found or network error.";
+//   };
+// };
+
+// Q2. Dad Joke Fetcher
+
+async function getJoke() {
+  const jokeBox = document.getElementById("jokeBox");
+
+  try {
+    const res = await fetch("https://icanhazdadjoke.com/", {
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+      const data = await res.json();
+      jokeBox.innerText = data.joke;
+  } catch (error) {
+     jokeBox.innerText = "Failed to load joke.";
   };
-  
-  
-  function swiggy(){
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("Order Delivered From: Swiggy");
-      }, 1000);
-  });
 };
 
-Promise.race([blinkit(), zomato(), swiggy()])
-.then(msg => console.log(msg))
-.catch(err => console.log(err));
+// Q3. Country Info App
+
+async function countryData() {
+  const country = document.getElementById("country").value;
+  const countryBox = document.getElementById("countryBox");
+  try {
+    const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+    const data = await res.json();
+    const info = data[0];
+
+    countryBox.innerHTML = `
+        <h3>${info.name.common} <img src="${info.flags.png}" width="20"></h3>
+        <p>Capital: ${info.capital[0]}</p>
+        <p>Region: ${info.region}</p>
+      `;
+
+  } catch (error) {
+    countryBox.innerHTML = "County not found";
+  }
+}
+
+// Q4 – Weather App (Live City Weather)
+
+// async function getWeather() {
+//   const weather = document.getElementById("weather").value;
+//   const weatherBox = document.getElementById("weatherBox");
+
+//   if (!weather) {
+//     weatherBox.innerText = "Please enter a city.";
+//     return;
+//   }
+
+//   try {
+//     const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${weather}&appid=YOUR_API_KEY&units=metric`);
+
+//     if (!res.ok) {
+//       weatherBox.innerText = "City not found or API error.";
+//       return;
+//     }
+
+//     const data = await res.json();
+//     console.log(data);
+
+//     weatherBox.innerHTML = `
+//       <h3>${data.name}</h3>
+//       <p>Temperature: ${data.main.temp}°C</p>
+//       <p>Humidity: ${data.main.humidity}%</p>
+//       <p>Condition: ${data.weather[0].description}</p>
+//     `;
+//   } catch (error) {
+//     console.log("Error caught:", error);
+//     weatherBox.innerText = "Sorry, something went wrong.";
+//   }
+// }
+
+// Q5 – FakeStore Products List App

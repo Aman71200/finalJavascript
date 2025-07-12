@@ -122,22 +122,49 @@
 
          <!-- Day 16: Form Handling (HTML + JS DOM) -->
 
-         <form id="contactForm" novalidate>
+         <!-- <form id="contactForm" novalidate>
             <input type="text" id="name" placeholder="Your Name" required />
             <input type="email" id="email" placeholder="Your Email" required />
             <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit" id="submitBtn">Send</button>
-         </form>
+         </form> -->
 
          
          <!-- // Q4:	Auto Text Changer Change text every 2s from array values. -->
 
-         <div id="text" style="margin-left: 100px; margin-top: 50px;"></div>
+         <!-- <div id="text" style="margin-left: 100px; margin-top: 50px;"></div> -->
 
          <!-- // Q5: Stop Interval on Click Use clearInterval() on button click. -->
 
          <!-- <span id="timer" style="margin: 150px 0 0 100px;">0</span>
          <button id="stopBtn" style="margin-left: 100px; margin-top: 50px;">Stop Text</button> -->
+
+         <!-- Day 21 of JavaScript -->
+
+         <!-- Q1. GitHub Profile Fetcher -->
+
+         <input type="text" id="username" placeholder="GitHub username">
+         <button onclick="fetchProfile()">Get Profile</button>
+         <p id="result"></p>
+
+         <!-- Q2. Dad Joke Fetcher -->
+
+         <button onclick="getJoke()">Get Joke</button>
+         <p id="jokeBox"></p>
+
+         <!-- Q3. Country Info App -->
+
+         <input type="text" id="country" placeholder="Enter country name">
+         <button onclick="countryData()">Get Info</button>
+         <div id="countryBox"></div>
+         
+         <!-- Q4 – Weather App (Live City Weather) -->
+         <!-- <input type="text" id="weather" placeholder="Enter your City">
+         <button onclick="getWeather()">Search</button>
+         <div id="weatherBox"></div> -->
+
+         <!-- Q5 – FakeStore Products List App -->
+
 </body>
 <script src="learn.js"></script>
 <script src="dom.js">

@@ -513,3 +513,32 @@ Finished my day with no guilt.
 > `async/await` – Learn how to simplify promise-based code using `async` and `await` keywords with real examples.
 
 ---
+
+# 📅 Day 21 – JavaScript 30-Day Challenge
+
+### 📌 Focus: JSON, `fetch()`, and `async/await`
+
+Today we practiced how to:
+- Understand JSON format and `JSON.parse()` / `JSON.stringify()`
+- Use `fetch()` to call external APIs
+- Handle responses using `async/await`
+- Display real API data in browser
+
+---
+
+## ✅ Practice Table
+
+| Q# | Title                | API Used                               | Input           | Output                                 |
+|----|----------------------|-----------------------------------------|------------------|-----------------------------------------|
+| 1  | GitHub Profile Fetcher | `https://api.github.com/users/:user`     | GitHub Username | Name + Public Repo Count               |
+| 2  | Dad Joke Fetcher     | `https://icanhazdadjoke.com/`           | (Button click)   | One random joke in text                |
+| 3  | Country Info App     | `https://restcountries.com/v3.1/name/`  | Country Name     | Name, Capital, Region, and Flag Image  |
+
+---
+
+## 📌 Q1 – GitHub Profile Fetcher
+
+**Example:**  
+User enters `Aman71200` → fetch GitHub data → display:
+
+---
