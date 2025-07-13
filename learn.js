@@ -1437,6 +1437,12 @@ async function countryData() {
     const data = await res.json();
     const info = data[0];
 
+    const name = info.name.common;
+    const capital = info.capital[0];
+    const population = info.population;
+    const continent = info.continents[0];
+    const flagURL = info.flags.png;
+
     countryBox.innerHTML = `
         <h3>${info.name.common} <img src="${info.flags.png}" width="20"></h3>
         <p>Capital: ${info.capital[0]}</p>
@@ -1483,3 +1489,80 @@ async function countryData() {
 // }
 
 // Q5 – FakeStore Products List App
+
+// ✅ Step 1: Define async function to fetch products
+async function getProduct() {
+  const productBox = document.getElementById("productBox"); // target div
+
+  try {
+    // ✅ Step 2: Fetch product data from API
+    const res = await fetch("https://fakestoreapi.com/products");
+
+    // ✅ Step 3: Convert response to JSON
+    const data = await res.json();
+    console.log(data); // for debugging – check array of objects
+
+    // ✅ Step 4: Clear the default text
+    productBox.innerHTML = "";
+
+    // ✅ Step 5: Loop through each product and create card
+    data.forEach(product => {
+      // Destructure product fields
+      const { title, price, image } = product;
+
+      // ✅ Step 6: Create HTML card using template literal
+      const card = `
+        <div class="card">
+          <img src="${image}" alt="${title}" />
+          <h3>${title}</h3>
+          <p>₹${price}</p>
+        </div>
+      `;
+
+      // ✅ Step 7: Append card to productBox
+      // productBox.innerHTML += card;
+    });
+
+  } catch (error) {
+    // ✅ Step 8: Show error if API fails
+    productBox.innerText = "❌ Failed to load products.";
+    console.error("Fetch error:", error);
+  }
+}
+
+// ✅ Step 9: Call function on page load
+getProduct(); 
+
+// Q6 – Random User Profile Generator
+
+async function getUser() {
+  const userBox = document.getElementById("userBox");
+  
+  try {
+    const res = await fetch(`https://randomuser.me/api/`);
+    const data = await res.json();
+    const user = data.results[0];
+    console.log(user);
+    
+    const name = `${user.name.first} ${user.name.last}`;
+    const email = user.email;
+    const imgURL = user.picture.large;
+
+  
+    userBox.innerHTML = "";
+
+    const card = `
+    <div class="card"> 
+      <img src="${imgURL}" />
+      <h3>${name}</h3>
+      <p>${email}</p>
+    </div>
+    `;
+
+    userBox.innerHTML = card;
+
+  } catch (error) {
+    userBox.innerHTML = "faile to load user data!"
+  }
+
+}

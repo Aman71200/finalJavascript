@@ -542,3 +542,19 @@ Today we practiced how to:
 User enters `Aman71200` → fetch GitHub data → display:
 
 ---
+
+# Day 21 – JSON & API Practice
+
+## Questions:
+- Q5 – FakeStore Product List App
+- Q6 – Random User Generator
+- Q7 – Skipped (already done in Q2)
+- Q8 – Country Info Finder (with population & continent)
+
+## Concepts:
+- JSON parsing
+- fetch() + async/await
+- innerHTML for DOM rendering
+- try...catch for error handling
+
+---
