@@ -1500,7 +1500,7 @@ async function getProduct() {
 
     // ✅ Step 3: Convert response to JSON
     const data = await res.json();
-    console.log(data); // for debugging – check array of objects
+    // console.log(data); // for debugging – check array of objects
 
     // ✅ Step 4: Clear the default text
     productBox.innerHTML = "";
@@ -1546,6 +1546,7 @@ async function getUser() {
     
     const name = `${user.name.first} ${user.name.last}`;
     const email = user.email;
+    const gender = user.gender;
     const imgURL = user.picture.large;
 
   
@@ -1556,6 +1557,7 @@ async function getUser() {
       <img src="${imgURL}" />
       <h3>${name}</h3>
       <p>${email}</p>
+      <p>${gender}</p>
     </div>
     `;
 
@@ -1565,4 +1567,38 @@ async function getUser() {
     userBox.innerHTML = "faile to load user data!"
   }
 
+}
+
+// Q9 – Currency Converter App
+
+async function convertFnc() {
+  const from = document.getElementById("currencyFrom").value.toUpperCase();
+  const to = document.getElementById("currencyTo").value.toUpperCase();
+  const amount = document.getElementById("amount").value;
+  const currencyBox = document.getElementById("currencyBox");
+
+  if (!from || !to || !amount) {
+    currencyBox.innerText = "Please enter all fields.";
+    return;
+  }
+
+  try {
+    const res = await fetch(`https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`);
+    const data = await res.json();
+
+    console.log(data); // 👈 check structure here in console
+
+    if (!data.result || !data.info) {
+      currencyBox.innerText = "Invalid data received from API.";
+      return;
+    }
+
+    currencyBox.innerHTML = `
+      <p>${amount} ${from} = <strong>${data.result.toFixed(2)} ${to}</strong></p>
+      <p>Exchange Rate: 1 ${from} = ${data.info.rate.toFixed(2)} ${to}</p>
+    `;
+  } catch (error) {
+    console.error(error);
+    currencyBox.innerText = "Failed to fetch conversion data.";
+  }
 }
